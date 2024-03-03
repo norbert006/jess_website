@@ -1,13 +1,20 @@
-import React from "react";
-import { GiHamburgerMenu } from 'react-icons/gi'
+import React, { useState, useEffect } from "react";
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineCloseCircle } from "react-icons/ai";
-
-import images from '../../constants/images'
-
+import images from '../../constants/images';
 import './Navbar.css';
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = React.useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const [showOverlay, setShowOverlay] = useState(false);
+
+    useEffect(() => {
+        if (toggleMenu) {
+            setShowOverlay(true);
+        } else {
+            setTimeout(() => setShowOverlay(false), 500); // Delay the hiding of the overlay to allow the sliding animation
+        }
+    }, [toggleMenu]);
 
     return (
         <nav className="app__navbar">
@@ -25,8 +32,8 @@ const Navbar = () => {
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
 
-                {toggleMenu && (
-                    <div className="app__navbar-smallscreen_overlay flex__center slide-left">
+                {showOverlay && (
+                    <div className={`app__navbar-smallscreen_overlay flex__center ${toggleMenu ? 'slide-left' : 'slide-right'}`}>
                         <AiOutlineCloseCircle fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
                         <ul className="app__navbar-smallscreen_links">
                             <li className="p__opensans"><a href="#home">Home</a></li>
@@ -35,10 +42,9 @@ const Navbar = () => {
                         </ul>
                     </div>
                 )}
-
             </div>
         </nav>
     )
 }
 
-export default Navbar
+export default Navbar;
