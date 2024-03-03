@@ -1,3 +1,4 @@
+/* Navbar positioning. */
 .app__navbar {
     width: 100%;
     display: flex;
@@ -7,16 +8,19 @@
     padding: 1rem 2rem;
 }
 
+/* Navbar logo positioning. */
 .app__navbar-logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
+/* Navbar logo size. */
 .app__navbar-logo img {
     width: 150px;
 }
 
+/* Navigation links positioning. */
 .app__navbar-links {
     flex: 1;
     display: flex;
@@ -25,28 +29,32 @@
     list-style: none;
 }
 
+/* Navigation links styling. */
 .app__navbar-links li {
     margin: 0 1rem;
     cursor: pointer;
 }
 
+/* Navigation links hover effect. */
 .app__navbar-links li:hover {
     color: var(--color-grey);
 }
 
-/* Edits the layout for the "inquiries" button */
+/* Edits the layout for the "inquiries" button. */
 .app__navbar-login {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
+/* Styling for the "inquiries" button including transition for the underline. */
 .app__navbar-login a {
     margin: 0 1rem;
     text-decoration: none;
     transition: 0.5s ease;
 }
 
+/* Give underline when hovering over "inquiries". */
 .app__navbar-login a:hover {
     border-bottom: 1px solid var(--color-golden);
 }
