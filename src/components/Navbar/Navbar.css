@@ -80,14 +80,19 @@
     z-index: 5;
 }
 
+/* Change cursor for humberger icon. */
+.app__navbar-smallscreen-closebutton {
+    cursor: pointer;
+}
+
 /* Here you can change the colour of the "x" button to close the overlay. */
 .app__navbar-smallscreen_overlay .overlay__close {
     font-size: 27px;
     color: whitesmoke;
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
 }
 
 /* Remove bulletpoints from overlay links. */
