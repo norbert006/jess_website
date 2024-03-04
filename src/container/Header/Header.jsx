@@ -12,7 +12,7 @@ const Header = () => (
                 <p className='p__opensans' style={{ margin: '2rem 0'}}>
                 Experience the Joy of Crafting Timeless Pottery Pieces with Expert Guidance and Hands-On Instruction.
                 </p>
-                <button type="button" className='custom__button'>Explore Menu</button>
+                <button type="button" className='custom__button'>Explore More</button>
             </div>
 
             <div className='app__wrapper_img'>
