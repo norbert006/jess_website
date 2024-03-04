@@ -4,8 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: white;
     padding: 1rem 2rem;
+    border-bottom: 1px solid black;
 }
 
 /* Navbar logo positioning. */
@@ -17,14 +18,14 @@
 
 /* Navbar logo size. */
 .app__navbar-logo img {
-    width: 150px;
+    max-width: 100px;
 }
 
 /* Navigation links positioning. */
 .app__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
 }
@@ -37,14 +38,7 @@
 
 /* Navigation links hover effect. */
 .app__navbar-links li:hover {
-    color: var(--color-grey);
-}
-
-/* Edits the layout for the "inquiries" button. */
-.app__navbar-login {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    border-bottom: 1px solid var(--color-jess-green);
 }
 
 /* Styling for the "inquiries" button including transition for the underline. */
@@ -57,10 +51,6 @@
 /* Give underline when hovering over "inquiries". */
 .app__navbar-login a:hover {
     border-bottom: 1px solid var(--color-golden);
-}
-
-.app__navbar-login {
-    width: 1px;
 }
 
 .app__navbar-smallscreen {
@@ -115,12 +105,14 @@
     color: whitesmoke;
     font-size: 2rem;
     text-align: center;
-    font-family: var(--font-base);
+    font-family: var(--font-alts);
+    transition: color 0.3s ease;
+
 }
 
 /* Hover effects for text inside overlay */
 .app__navbar-smallscreen_links li:hover {
-    color: white;
+    color: var(--color-jess-pink);
 }
 
 @media screen and (max-width: 2000px) {

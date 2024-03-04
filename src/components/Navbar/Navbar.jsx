@@ -19,18 +19,17 @@ const Navbar = () => {
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
-                <img src={images} alt="app logo" />
+                <a href="#home"><img src={images} alt="app_logo" /></a>
             </div>
             <ul className="app__navbar-links">
                 <li className="p__opensans"><a href="#home">Home</a></li>
                 <li className="p__opensans"><a href="#about">About</a></li>
-                <li className="p__opensans"><a href="#contact">Contact</a></li>
+                <li className="p__opensans"><a href="#about">Events</a></li>
+                <li className="p__opensans"><a href="#about">Pricing</a></li>
+                <li className="p__opensans"><a href="#contact">Contact/Inquiries</a></li>
             </ul>
-            <div className="app__navbar-login">
-                <a href="/" className="p__opensans">Inquiries</a>
-            </div>
             <div className="app__navbar-smallscreen">
-                <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
+                <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#000000" fontSize={27} onClick={() => setToggleMenu(true)} />
 
                 {showOverlay && (
                     <div className={`app__navbar-smallscreen_overlay flex__center ${toggleMenu ? 'slide-left' : 'slide-right'}`}>
@@ -38,7 +37,9 @@ const Navbar = () => {
                         <ul className="app__navbar-smallscreen_links">
                             <li className="p__opensans"><a href="#home">Home</a></li>
                             <li className="p__opensans"><a href="#about">About</a></li>
-                            <li className="p__opensans"><a href="#contact">Contact</a></li>
+                            <li className="p__opensans"><a href="#about">Events</a></li>
+                            <li className="p__opensans"><a href="#about">Pricing</a></li>
+                            <li className="p__opensans"><a href="#contact">Contact/Inquiries</a></li>
                         </ul>
                     </div>
                 )}

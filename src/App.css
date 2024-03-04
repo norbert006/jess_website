@@ -80,7 +80,7 @@
   
   .p__opensans {
     font-family: var(--font-alt);
-    color: var(--color-white);
+    color: black;
     font-weight: 400;
     letter-spacing: 0.04em;
     text-transform: capitalize;
