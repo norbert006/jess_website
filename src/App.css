@@ -49,7 +49,7 @@
   }
   
   .app__wrapper_img img {
-    width: 80%;
+    width: 800px;
   }
   
   .custom__button {
@@ -69,7 +69,7 @@
   
   .p__cormorant {
     font-family: var(--font-base);
-    color: var(--color-white);
+    color: black;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: capitalize;

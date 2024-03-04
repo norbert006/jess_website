@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import images from '../../constants/images';
+import clayfulhands_logo from '../../assets/clayfulhands_logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
-                <a href="#home"><img src={images} alt="app_logo" /></a>
+                <a href="#home"><img src={clayfulhands_logo} alt="app_logo" /></a>
             </div>
             <ul className="app__navbar-links">
                 <li className="p__opensans"><a href="#home">Home</a></li>
