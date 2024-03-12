@@ -24,9 +24,8 @@ const Navbar = () => {
             <ul className="app__navbar-links">
                 <li className="p__opensans"><a href="#home">Home</a></li>
                 <li className="p__opensans"><a href="#about">About</a></li>
-                <li className="p__opensans"><a href="#about">Events</a></li>
-                <li className="p__opensans"><a href="#about">Pricing</a></li>
-                <li className="p__opensans"><a href="#contact">Contact/Inquiries</a></li>
+                <li className="p__opensans"><a href="#events_pricing">Events & Pricing</a></li>
+                <li className="p__opensans"><a href="#contact">Contact</a></li>
             </ul>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#000000" fontSize={27} onClick={() => setToggleMenu(true)} />
@@ -37,9 +36,8 @@ const Navbar = () => {
                         <ul className="app__navbar-smallscreen_links">
                             <li className="p__opensans"><a href="#home">Home</a></li>
                             <li className="p__opensans"><a href="#about">About</a></li>
-                            <li className="p__opensans"><a href="#about">Events</a></li>
-                            <li className="p__opensans"><a href="#about">Pricing</a></li>
-                            <li className="p__opensans"><a href="#contact">Contact/Inquiries</a></li>
+                            <li className="p__opensans"><a href="#events_pricing">Events & Pricing</a></li>
+                            <li className="p__opensans"><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 )}
