@@ -49,7 +49,7 @@
 
 .gallery__image-icon {
     position: absolute;
-    color: black;
+    color: var(--color-jess-green);
     font-size: 2rem;
     opacity: 0;
     transition: 0.5s ease;
@@ -61,13 +61,13 @@
     height: 100%;
     object-fit: cover;
     opacity: 1;
-    transition: 0.5s ease;
+    transition: border 0.2s ease-in-out;
 }
 
 .app__gallery-images_card:hover img {
     opacity: 0.75;
     cursor: pointer;
-    border: solid var(--color-jess-pink) 8px;
+    border: solid var(--color-jess-green) 8px;
     border-radius: 10px;
 }
 
@@ -95,8 +95,7 @@
 }
 
 .gallery__arrow-icon:hover {
-    color: var(--color-jess-green);
-    background-color: var(--color-jess-blue);
+    background-color: var(--color-jess-green);
 
 }
 
