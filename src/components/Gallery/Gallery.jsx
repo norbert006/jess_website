@@ -27,7 +27,8 @@ const Gallery = () => {
             <div className="app__gallery-content">
                 <SubHeading title="About Us" />
                 <h1 className="headtext__cormorant">Jess & Sydney</h1>
-                <p className="p__opersans" style={{ color: '#AAA', marginTop: '2rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="p__opersans" style={{ color: '#AAA', marginTop: '2rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <button type="button" className="custom__button" onClick={() => openWebsite("https://www.facebook.com/clayfulhands")}>Find out more</button>
             </div>
 
