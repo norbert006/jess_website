@@ -6,6 +6,7 @@ import ContactForm from './components/ContactForm/ContactForm';
 import Gallery from './components/Gallery/Gallery';
 import Footer from './components/Footer/Footer';
 import InfoBox from './components/InfoBox/InfoBox';
+import Tester from './components/Tester/Tester';
 import './App.css'
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <InfoBox />
       <ContactForm />
       <Footer />
+      <Tester />
     </div>
   )
 }
