@@ -9,9 +9,9 @@ const ContactForm = () => {
     const emailInputRef = useRef(null);
     const messageInputRef = useRef(null);
 
-    const publicKey = "hkT0Gj_7wm2oOSfCi";
-    const serviceID = "service_kja18h3";
-    const templateID = "template_nx9dk1g";
+    const publicKey = process.env.REACT_APP_PUBLICKEY;
+    const serviceID = process.env.REACT_APP_SERVICEID;
+    const templateID = process.env.REACT_APP_TEMPLATEID;
 
     emailjs.init(publicKey);
 
