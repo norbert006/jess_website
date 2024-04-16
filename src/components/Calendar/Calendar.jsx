@@ -73,9 +73,16 @@ const BookingCalendar = () => {
     <div className="booking-calendar">
       <h2 className="calendar-heading">Select a date for booking:</h2>
       <Calendar
-        onChange={(newDate) => setDate(newDate)}
+        onChange={(newDate) => {
+          if (newDate.getHours() !== 0) {
+            newDate.setHours(0, 0, 0, 0)
+            setDate(newDate)
+          } else {
+            setDate(newDate)
+          }
+          }}
         value={date}
-        minDate={new Date(new Date().getTime() + 24 * 60 * 60 * 1000)} // Optional: Set minimum selectable date to today
+        minDate={new Date(new Date().getTime() + 24 * 60 * 60 * 1000)} // Optional: Set minimum selectable date to tomorrow.
         tileDisabled={({ date }) => isDateBooked(date)} // Disable booked dates
         tileClassName={tileClassName} // Apply custom styles to disabled dates
       />
