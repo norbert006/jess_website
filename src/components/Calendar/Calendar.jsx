@@ -41,7 +41,8 @@ const BookingCalendar = () => {
         email: emailInputRef
       });
       setIsBookingConfirmed(true);
-    } catch (error) {
+      window.location.reload()
+        } catch (error) {
       console.error('Error booking session:', error);
     }
   };
@@ -74,7 +75,7 @@ const BookingCalendar = () => {
       <Calendar
         onChange={(newDate) => setDate(newDate)}
         value={date}
-        minDate={new Date()} // Optional: Set minimum selectable date to today
+        minDate={new Date(new Date().getTime() + 24 * 60 * 60 * 1000)} // Optional: Set minimum selectable date to today
         tileDisabled={({ date }) => isDateBooked(date)} // Disable booked dates
         tileClassName={tileClassName} // Apply custom styles to disabled dates
       />
