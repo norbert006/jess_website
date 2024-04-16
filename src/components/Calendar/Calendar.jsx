@@ -8,8 +8,13 @@ import './Calendar.css'; // Import CSS file for custom styles
 const BookingCalendar = () => {
   const [date, setDate] = useState(new Date());
   const [sessionType, setSessionType] = useState('');
+  const [noOfPeople, setNoOfPeople] = useState("");
   const [isBookingConfirmed, setIsBookingConfirmed] = useState(false);
   const [bookedDates, setBookedDates] = useState([]);
+  const [firstNameInputRef, setFirstNameInputRef] = useState('');
+  const [lastNameInputRef, setLastNameInputRef] = useState('');
+  const [emailInputRef, setEmailInputRef] = useState('');
+
 
   useEffect(() => {
     const fetchBookings = async () => {
@@ -22,34 +27,34 @@ const BookingCalendar = () => {
         console.error('Error fetching bookings:', error);
       }
     };
-
     fetchBookings();
   }, []);
 
-
-  const onChangeDate = (newDate) => {
-    setDate(newDate);
-  };
-
-  const onSelectSessionType = (event) => {
-    setSessionType(event.target.value);
-  };
-
   const handleBooking = async () => {
     try {
-      await axios.post("http://localhost:8800/api/booking", { date, sessionType });
+      await axios.post("http://localhost:8800/api/booking", {
+        date,
+        sessionType,
+        noOfPeople,
+        name: firstNameInputRef,
+        surname: lastNameInputRef,
+        email: emailInputRef
+      });
       setIsBookingConfirmed(true);
     } catch (error) {
       console.error('Error booking session:', error);
     }
   };
 
+  // noOfPeople, firstNameInputRef, lastNameInputRef, emailInputRef
   const closeModal = () => {
     setIsBookingConfirmed(false);
   };
 
   const isFormValid = () => {
-    return sessionType !== '';
+    const isFilledOut = sessionType !== '' && noOfPeople !== '' &&
+      firstNameInputRef !== '' && lastNameInputRef !== '' && emailInputRef !== ''
+    return isFilledOut;
   };
 
   const isDateBooked = (date) => {
@@ -67,18 +72,56 @@ const BookingCalendar = () => {
     <div className="booking-calendar">
       <h2 className="calendar-heading">Select a date for booking:</h2>
       <Calendar
-        onChange={onChangeDate}
+        onChange={(newDate) => setDate(newDate)}
         value={date}
         minDate={new Date()} // Optional: Set minimum selectable date to today
         tileDisabled={({ date }) => isDateBooked(date)} // Disable booked dates
         tileClassName={tileClassName} // Apply custom styles to disabled dates
       />
       <h2 className="calendar-heading">Select the type of pottery session:</h2>
-      <select value={sessionType} onChange={onSelectSessionType} className="session-type-select">
-        <option value="" disabled selected>Select your option</option>
-        <option value="hen">Hen Party</option>
-        <option value="birthday">Birthday</option>
-        <option value="popup">Pop-up Event</option>
+      <label htmlFor="first_name">First name</label>
+      <input
+        className='calendar_input'
+        type='text'
+        value={firstNameInputRef}
+        placeholder='Your First Name...'
+        onChange={(event) => setFirstNameInputRef(event.target.value)}
+        required
+      />
+      <label htmlFor="last_name">Last name</label>
+      <input
+        className='calendar_input'
+        type="text"
+        value={lastNameInputRef}
+        placeholder='Your Last Name...'
+        onChange={(event) => setLastNameInputRef(event.target.value)}
+        required
+      />
+      <label htmlFor="user_email">Email</label>
+      <input
+        className='calendar_input'
+        type="email"
+        value={emailInputRef}
+        placeholder='example@gmail.com'
+        onChange={(event) => setEmailInputRef(event.target.value)}
+        required
+      />
+      <label>Type of party</label>
+      <select value={sessionType} onChange={(event) => setSessionType(event.target.value)} className="session-type-select">
+        <option value="" disabled selected>Choose type of session</option>
+        <option value="Hen">Hen Party</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Pop-up">Pop-up Event</option>
+      </select>
+      <label>Number of participants</label>
+      <select value={noOfPeople} onChange={(event) => setNoOfPeople(event.target.value)} className="session-type-select">
+        <option value="" disabled selected>Choose number of participants</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
       </select>
       <button onClick={handleBooking} disabled={!isFormValid()} className='custom__button'>Book Session</button>
       <Modal
@@ -87,7 +130,7 @@ const BookingCalendar = () => {
         contentLabel="Booking Confirmation"
       >
         <h2>Booking Confirmed!</h2>
-        <p>You have successfully booked a {sessionType} session on {date.toDateString()}.</p>
+        <p>You have successfully booked a {sessionType} session for {date.toDateString()}.</p>
         <button onClick={closeModal}>Close</button>
       </Modal>
     </div>

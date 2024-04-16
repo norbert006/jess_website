@@ -17,9 +17,15 @@ const App = () => {
       <Header />
       <Gallery />
       <InfoBox />
-      <ContactForm />
+      <div className='boxes_container'>
+        <div className='box-1'>
+          <Calendar />
+        </div>
+        <div className='box-2'>
+          <ContactForm />
+        </div>
+      </div>
       <Footer />
-      <Calendar />
     </div>
   )
 }

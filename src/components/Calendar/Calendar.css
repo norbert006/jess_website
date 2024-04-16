@@ -12,6 +12,10 @@
   padding: 4rem 0;
 }
 
+.booking-calendar label{
+  background: white;
+}
+
 .calendar-container {
   max-width: 800px;
   width: 100%;
@@ -89,4 +93,16 @@
 .custom__button:disabled {
   background-color: lightgray;
   cursor: not-allowed;
+}
+
+.calendar_input {
+  border: solid var(--color-jess-pink) 1px;
+  padding: 0.8em;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0.5em 0 1em 0;
+  font-size: 1.1em;
+  background: #ffffff;
+  color: #969696;
+  font-family: 'Courier New', Courier, monospace;
 }
