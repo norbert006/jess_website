@@ -7,6 +7,7 @@ import './Calendar.css'; // Import CSS file for custom styles
 
 const BookingCalendar = () => {
   const [date, setDate] = useState(new Date());
+  const [isDateSelected, setIsDateSelected] = useState(false);
   const [sessionType, setSessionType] = useState('');
   const [noOfPeople, setNoOfPeople] = useState("");
   const [isBookingConfirmed, setIsBookingConfirmed] = useState(false);
@@ -41,7 +42,6 @@ const BookingCalendar = () => {
         email: emailInputRef
       });
       setIsBookingConfirmed(true);
-      window.location.reload()
         } catch (error) {
       console.error('Error booking session:', error);
     }
@@ -49,12 +49,13 @@ const BookingCalendar = () => {
 
   // noOfPeople, firstNameInputRef, lastNameInputRef, emailInputRef
   const closeModal = () => {
+    window.location.reload()
     setIsBookingConfirmed(false);
   };
 
   const isFormValid = () => {
     const isFilledOut = sessionType !== '' && noOfPeople !== '' &&
-      firstNameInputRef !== '' && lastNameInputRef !== '' && emailInputRef !== ''
+      firstNameInputRef !== '' && lastNameInputRef !== '' && emailInputRef !== '' && isDateSelected
     return isFilledOut;
   };
 
@@ -75,10 +76,12 @@ const BookingCalendar = () => {
       <Calendar
         onChange={(newDate) => {
           if (newDate.getHours() !== 0) {
-            newDate.setHours(0, 0, 0, 0)
-            setDate(newDate)
+            newDate.setHours(0, 0, 0, 0);
+            setDate(newDate);
+            setIsDateSelected(true);
           } else {
-            setDate(newDate)
+            setDate(newDate);
+            setIsDateSelected(true);
           }
           }}
         value={date}
@@ -133,13 +136,14 @@ const BookingCalendar = () => {
       </select>
       <button onClick={handleBooking} disabled={!isFormValid()} className='custom__button'>Book Session</button>
       <Modal
+        className={"react-modal"}
         isOpen={isBookingConfirmed}
         onRequestClose={closeModal}
         contentLabel="Booking Confirmation"
       >
-        <h2>Booking Confirmed!</h2>
-        <p>You have successfully booked a {sessionType} session for {date.toDateString()}.</p>
-        <button onClick={closeModal}>Close</button>
+        <h2 className='modal-title'>Booking Confirmed!</h2>
+        <p className='modal-message'>You have successfully booked a {sessionType} session for {date.toDateString()}.</p>
+        <button onClick={closeModal} className='modal-close-btn'>Close</button>
       </Modal>
     </div>
   );

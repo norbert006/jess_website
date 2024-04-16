@@ -106,3 +106,46 @@
   color: #969696;
   font-family: 'Courier New', Courier, monospace;
 }
+
+.react-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* CSS for the modal title */
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* CSS for the modal message */
+.modal-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* CSS for the modal close button */
+.modal-close-btn {
+  background-color: var(--color-jess-pink);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* CSS for the modal close button on hover */
+.modal-close-btn:hover {
+  background-color: #d32f2f;
+}
