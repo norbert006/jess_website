@@ -20,7 +20,7 @@ const BookingCalendar = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('http://localhost:8800/api/booking');
+        const response = await axios.get('https://clayful-backend.onrender.com/api/booking');
         const bookings = response.data;
         const dates = bookings.map((booking) => new Date(booking.date));
         setBookedDates(dates);
@@ -33,7 +33,7 @@ const BookingCalendar = () => {
 
   const handleBooking = async () => {
     try {
-      await axios.post("http://localhost:8800/api/booking", {
+      await axios.post("https://clayful-backend.onrender.com/api/booking", {
         date,
         sessionType,
         noOfPeople,
