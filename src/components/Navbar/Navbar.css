@@ -5,8 +5,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid black;
+    padding: 1rem 3rem;
 }
 
 /* Navbar logo positioning. */
@@ -18,7 +17,7 @@
 
 /* Navbar logo size. */
 .app__navbar-logo img {
-    max-width: 100px;
+    max-width: 125px;
 }
 
 /* Navigation links positioning. */
@@ -34,11 +33,14 @@
 .app__navbar-links li {
     margin: 0 1rem;
     cursor: pointer;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 25px;
+    color : var(--color-jess-pink);
 }
 
 /* Navigation links hover effect. */
 .app__navbar-links li:hover {
-    border-bottom: 1px solid var(--color-jess-green);
+    color: var(--color-jess-blue);
 }
 
 /* Styling for the "inquiries" button including transition for the underline. */

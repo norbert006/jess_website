@@ -22,10 +22,11 @@ const Navbar = () => {
                 <a href="#home"><img src={clayfulhands_logo} alt="app_logo" /></a>
             </div>
             <ul className="app__navbar-links">
-                <li className="p__opensans"><a href="#home">Home</a></li>
-                <li className="p__opensans"><a href="#about">About</a></li>
-                <li className="p__opensans"><a href="#events_pricing">Events & Pricing</a></li>
-                <li className="p__opensans"><a href="#contact">Contact</a></li>
+                <li className="p__opensans"><a href="#home">HOME</a></li>
+                <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
+                <li className="p__opensans"><a href="#about_us">ABOUT US</a></li>
+                <li className="p__opensans"><a href="#private_events">PRIVATE EVENTS</a></li>
+                <li className="p__opensans"><a href="#contact_us">CONTACT US</a></li>
             </ul>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#000000" fontSize={27} onClick={() => setToggleMenu(true)} />
