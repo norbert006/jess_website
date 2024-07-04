@@ -1,3 +1,164 @@
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 4rem;
+    /* background-image: ; */
+}
+
+.about-us-title {
+    font-size: 4rem;
+    color: var(--color-jess-pink); /* Light brown color for "ABOUT US" */
+    text-align: center;
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about-us-text {
+    font-size: 30px;
+    max-width: 60%;
+    color: #3D1A54; /* Dark purple text color */
+    font-family: 'Hammersmith One', sans-serif; /* Ensure the font is the same as in your design */
+    margin-left: 10rem;
+}
+
+.about-us-text p {
+    width:30rem;
+    text-align:justify;
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+
+p:after {/* this adds an extra invisible line, so any other line is justified */
+    content:'';
+    display:inline-block;
+    width:100%;
+    vertical-align:top;
+    }
+
+.about-us-logo {
+    padding: 3rem;
+    max-width: 35%;
+}
+
+.about-us-logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 2000px) {
+    .about-us-title {
+        font-size: 6rem;
+    }
+    .about-us-text p {
+        font-size: 2.5rem;
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .about-us-text {
+        margin-left: 5rem;
+    }
+    .about-us-text p {
+        font-size: 1.5rem;
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .about-us-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-us-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .about-us-text p {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    .about-us-logo {
+        max-width: 50%;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-us-title {
+        font-size: 3rem;
+    }
+    .about-us-text p {
+        width: 90%;
+        font-size: 1.3rem;
+    }
+    .about-us-logo {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-us-container {
+        padding: 2rem;
+    }
+    .about-us-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+    }
+    .about-us-text p {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .about-us-logo {
+        max-width: 70%;
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .app__gallery {
     display: flex;
     flex-direction: row;

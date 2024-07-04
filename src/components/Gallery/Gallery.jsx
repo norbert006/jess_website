@@ -5,48 +5,19 @@ import Images from "../../assets/Images"
 import './Gallery.css';
 
 const Gallery = () => {
-    const scrollRef = React.useRef(null)
-    const scroll = (direction) => {
-        const { current } = scrollRef;
-
-        if (direction === 'left') {
-            current.scrollLeft -= 300;
-        } else {
-            current.scrollLeft += 300;
-        }
-    }
-    const galleryImages = [Images.sample_image1, Images.sample_image2, Images.sample_image3]
-
-    const openWebsite = (url) => {
-        window.open(url, "_blank", "noreferrer");
-      };
-
-
     return (
-        <div className="app__gallery flex__center">
-            <div className="app__gallery-content">
-                <SubHeading title="About Us" />
-                <h1 className="headtext__cormorant">Jess & Sydney</h1>
-                <p className="p__opersans" style={{ color: '#AAA', marginTop: '2rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button type="button" className="custom__button" onClick={() => openWebsite("https://www.facebook.com/clayfulhands")}>Find out more</button>
-            </div>
+        <div className="about-us-container">
+            <h2 className="about-us-title">ABOUT US</h2>
+            <div className="about-us-content">
+                <div className="about-us-text">
+                    <p> Clayful hands was started up in 2023 by Jess and Sydney. They are passionate about bringing the love they have for all things clay to others.
+                    Their aim is to make sure everyone has the time to explore the medium and have some fun! Clayful Hands are currently based in East Sussex. </p>
 
-            <div className="app__gallery-images">
-                <div className="app__gallery-images_container" ref={scrollRef}>
-                    {galleryImages.map((image, index) => (
-                        <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
-                            <img src={image} alt="gallery" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")}/>
-                            <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")}/>
-                        </div>
-                    ))}
                 </div>
-                <div className="app__gallery-images_arrows">
-                    <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
-                    <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
+                <div className="about-us-logo">
+                    <img src={Images.clayfulhands_logo_transparent} alt="Clayful Hands Logo" />
                 </div>
             </div>
-
         </div>
     );
 }
