@@ -35,10 +35,11 @@ const Navbar = () => {
                     <div className={`app__navbar-smallscreen_overlay flex__center ${toggleMenu ? 'slide-left' : 'slide-right'}`}>
                         <AiOutlineCloseCircle fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
                         <ul className="app__navbar-smallscreen_links">
-                            <li className="p__opensans"><a href="#home">Home</a></li>
-                            <li className="p__opensans"><a href="#about">About</a></li>
-                            <li className="p__opensans"><a href="#events_pricing">Events & Pricing</a></li>
-                            <li className="p__opensans"><a href="#contact">Contact</a></li>
+                            <li className="p__opensans"><a href="#home">HOME</a></li>
+                            <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
+                            <li className="p__opensans"><a href="#about_us">ABOUT US</a></li>
+                            <li className="p__opensans"><a href="#private_events">PRIVATE EVENTS</a></li>
+                            <li className="p__opensans"><a href="#contact_us">CONTACT US</a></li>
                         </ul>
                     </div>
                 )}

@@ -1,4 +1,66 @@
-.app__header {
+.header {
+    text-align: center;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .mainImage {
+    width: 90%;
+    max-width: none;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button:nth-child(1) {
+    background-color: #b8c7a0;
+  }
+  
+  .button:nth-child(2) {
+    background-color: #3b275f;
+    color: white;
+  }
+  
+  .button:nth-child(3) {
+    background-color: #d6b0a1;
+  }
+  
+  .thumbnailsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .thumbnail {
+    width: 27%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+
+
+/* .app__header {
     background-color: white;
 }
 
@@ -7,10 +69,79 @@
     color: black;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    /* line-height: 117px; */
+    line-height: 117px; 
     font-size: 60px;
 }
 
 .app__header-img img {
     width: 100%;
 }
+ */
+
+ @media screen and (min-width: 2000px) {
+    .imageContainer {
+      height: 400px;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+    .thumbnail {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .imageContainer {
+      height: 250px;
+    }
+    .button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+    .thumbnail {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .imageContainer {
+      height: 200px;
+    }
+    .button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .thumbnail {
+      width: 160px;
+      height: 160px;
+    }
+    .thumbnailsContainer{
+      gap: 20px;
+    }
+
+  }
+  
+  @media screen and (max-width: 450px) {
+    .imageContainer {
+      height: 150px;
+    }
+    .button {
+      padding: 6px 10px;
+      font-size: 10px;
+    }
+    .thumbnail {
+      width: 100px;
+      height: 85px;
+    }
+  }
+  
