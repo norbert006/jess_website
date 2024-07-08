@@ -24,3 +24,31 @@
     letter-spacing: 0.04em;
     text-transform: capitalize;
 }
+
+.infoBox {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.infoBox_header {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 70px; /* Adjusted to match the image */
+    color: var(--color-jess-pink); /* White text color */
+    padding: 10px 20px; /* Add padding inside the header */
+    display: inline-block; /* Ensure the background color doesn't span the full width */
+    border-radius: 5px; /* Optional: round the corners */
+    text-align:center;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.infoBox_para {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 30px;
+    line-height: 1.4; /* Adjusted for better spacing */
+}

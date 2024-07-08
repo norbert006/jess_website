@@ -42,16 +42,14 @@ const InfoBox = () => {
             <div className='app__bg app__wrapper section__padding'>
 
                 <div className='app__wrapper_info'>
-                    <SubHeading title="Event Title" />
-                    <h1 className='headtext__cormorant'>Some random text</h1>
+                    <h1 className='headtext__cormorant'>PRIVATE EVENTS</h1>
 
                     <div className='app__chef-content'>
                         <div className='app__chef-content-quote'>
-                            <p className='p__opensans'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p className='p__opensans'>Hire us for a private event! We offer packages for hen/stag do's as well as team building. We can offer hand-building,
+                            throwing, pottery painting or combination of throwing and pottery painting!</p>
                         </div>
-                        <p className='p__opensans'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p className='p__opensans'>If you have an event you would like to celebrate with us then get in touch for more info on availability.</p>
                     </div>
 
                     <div className='app__chef-sign'>
@@ -65,13 +63,10 @@ const InfoBox = () => {
                                 ))}
                             </div>
                             <div className="app__gallery-images_arrows">
-                                <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
+                                <BsArrowLeftShort transform="shrink-6" className="gallery__arrow-icon" onClick={() => scroll('left')} />
                                 <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
                             </div>
                         </div>
-
-                        <p>Price</p>
-                        <p className='p__opensans'>£££</p>
                     </div>
                 </div>
 
@@ -90,29 +85,17 @@ const InfoBox = () => {
                         ))}
                     </div>
                     <div className="app__gallery-images_arrows">
-                        <BsArrowLeftShort className="gallery__arrow-icon" onClick={() => scroll('left')} />
+                        <BsArrowLeftShort transform="shrink-2" className="gallery__arrow-icon" onClick={() => scroll('left')} />
                         <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
                     </div>
                 </div>
 
-                <div className='app__wrapper_info' style={{ marginLeft: '5rem' }}>
-                    <SubHeading title="Event Title" />
-                    <h1 className='headtext__cormorant'>Some random text</h1>
-
-                    <div className='app__chef-content'>
-                        <div className='app__chef-content-quote'>
-                            <p className='p__opensans'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <p className='p__opensans'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-
-                    <div className='app__chef-sign'>
-                        <p>Price</p>
-                        <p className='p__opensans'>£££</p>
-                    </div>
-
+                <div className='app__wrapper_info infoBox' style={{ marginLeft: '5rem' }}>
+                    <h1 className='infoBox_header'>PRIVATE EVENTS</h1>
+                    <p className='infoBox_para'>Hire us for a private event! We offer packages for hen/stag do's as well as team building. We can offer hand-building,
+                        throwing, pottery painting or combination of throwing and pottery painting! 
+                    </p>
+                    <p className='infoBox_para'>If you have an event you would like to celebrate with us then get in touch for more info on availability.</p>
                 </div>
             </div>
         )

@@ -110,22 +110,25 @@
 }
 
 .p__opensans {
-  font-family: var(--font-alt);
-  color: black;
-  font-weight: 400;
+  font-family: "Hammersmith One", sans-serif;
+  color: var(--color-jess-green);
   letter-spacing: 0.04em;
   text-transform: capitalize;
   line-height: 28px;
-  font-size: 16px;
+  font-size: 30px;
 }
 
 .headtext__cormorant {
-  font-family: var(--font-base);
-  color: var(--color-golden);
+  font-family: "Hammersmith One", sans-serif;
+  color: var(--color-jess-pink); /* White text color */
+  padding: 10px 20px; /* Add padding inside the header */
+  border-radius: 5px; /* Optional: round the corners */
+  display: inline-block; /* Ensure the background color doesn't span the full width */
+  text-align:center;
+  margin: auto;
   font-size: 64px;
   line-height: 83.2px;
   letter-spacing: 0.04em;
-  text-transform: capitalize;
 }
 
 .spoon__img {
@@ -236,7 +239,7 @@
 
 @media screen and (max-width: 450px) {
   .p__opensans {
-    font-size: 12px;
+    font-size: 20px;
   }
 
   .p__cormorant {
@@ -245,6 +248,6 @@
 
   .headtext__cormorant {
     font-size: 45px;
-    line-height: 70px;
+    line-height: 40px;
   }
 }
