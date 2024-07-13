@@ -64,10 +64,6 @@
         font-size: 2.5rem;
         width: 40rem;
     }
-    .about-us-container {
-        background-position: -8rem -13.2rem;
-        background-size: 150% 135%;
-    }
 }
 
 @media screen and (max-width: 1150px) {
