@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem;
-    background-image: url('../../assets/Blue_wave_background2.svg');
+    padding: 8rem 4rem;
+    background-image: url('../../assets/Blue_wave_background4.svg');
     background-repeat: no-repeat;
-    background-position: 0 -7rem;
+    background-position: -6rem -6rem;
 }
 
 .about-us-title {
@@ -26,11 +26,10 @@
 }
 
 .about-us-text {
-    font-size: 30px;
     max-width: 60%;
     color: #3D1A54; /* Dark purple text color */
     font-family: 'Hammersmith One', sans-serif; /* Ensure the font is the same as in your design */
-    margin-left: 6rem;
+    margin-left: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,8 +39,8 @@
 
 .about-us-text p {
     color: white;
-    width:30rem;
-    font-size: 1.7rem;
+    width: 40rem;
+    font-size: 32px;
     line-height: 1.5;
 }
 
@@ -64,6 +63,10 @@
     .about-us-text p {
         font-size: 2.5rem;
         width: 40rem;
+    }
+    .about-us-container {
+        background-position: -8rem -13.2rem;
+        background-size: 150% 135%;
     }
 }
 
@@ -100,12 +103,23 @@
     .about-us-title {
         font-size: 3rem;
     }
+    .about-us-text {
+        max-width: 85%;
+        margin-top: 4rem;
+    }
     .about-us-text p {
-        width: 90%;
         font-size: 1.3rem;
     }
     .about-us-logo {
         max-width: 60%;
+    }
+    .about-us-logo img {
+        margin-top: 5rem;
+    }
+    .about-us-container {
+        background-image: url('../../assets/Blue_wave_background4_rotated.svg');
+        background-position: -8rem -13.2rem;
+        background-size: 150% 135%;
     }
 }
 
