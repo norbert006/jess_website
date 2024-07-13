@@ -4,6 +4,9 @@ import header_photo from '../../assets/header_photo.JPG'
 import sub_header_finger from '../../assets/sub_header_finger.JPG';
 import sub_header_hen from '../../assets/sub_header_hen.JPG';
 import sub_header_family from '../../assets/sub_header_family.JPG';
+import button1 from "../../assets/button1.svg"
+import button2 from "../../assets/button2.svg"
+import button3 from "../../assets/button3.svg"
 import SubHeading from '../../components/SubHeading/SubHeading';
 import './Header.css'
 
@@ -13,9 +16,9 @@ const Header = () => (
             <img src={header_photo} alt="Clay hands" className='mainImage' />
         </div>
         <div className='buttonsContainer'>
-            <button className='button'>Upcoming Events</button>
-            <button className='button'>Private Events</button>
-            <button className='button'>Clay Clubs</button>
+            <img src={button1} className='button'/>
+            <img src={button2} className='button'/>
+            <img src={button3} className='button'/>
         </div>
         <div className='thumbnailsContainer'>
             <img src={sub_header_finger} alt="Thumbnail 1" className='thumbnail' />
