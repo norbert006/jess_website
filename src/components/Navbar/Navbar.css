@@ -149,4 +149,7 @@
     .app__navbar-logo {
         width: 110px;
     }
+    .app__navbar-logo img {
+        max-width: 100px;
+    }
 }
