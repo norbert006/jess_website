@@ -1,11 +1,8 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Hammersmith One', 'Courier New', Courier, monospace;
 }
 
 .contact {
@@ -55,8 +52,6 @@ body {
     font-size: 1.1em;
     background: #eee;
     color: #969696;
-    font-family: 'Courier New', Courier, monospace;
-
 }
 
 /* .contact label {
