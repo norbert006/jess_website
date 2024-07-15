@@ -114,6 +114,9 @@
     .thumbnailsContainer{
       gap: 20px;
     }
+    .buttonsContainer {
+      margin: 30px 0 30px 194px;
+    }
     .button{
       width: 130px;
       height: 35px;
