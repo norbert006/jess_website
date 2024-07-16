@@ -32,23 +32,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 
 .infoBox_header {
-    font-family: "Hammersmith One", sans-serif;
-    font-size: 70px; /* Adjusted to match the image */
-    color: var(--color-jess-pink); /* White text color */
     padding: 10px 20px; /* Add padding inside the header */
     display: inline-block; /* Ensure the background color doesn't span the full width */
-    border-radius: 5px; /* Optional: round the corners */
     text-align:center;
     margin: auto;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .infoBox_para {
     font-family: "Hammersmith One", sans-serif;
     font-size: 30px;
     line-height: 1.4; /* Adjusted for better spacing */
+    color: var(--color-jess-green);
 }
