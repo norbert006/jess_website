@@ -31,7 +31,7 @@ const InfoBox = () => {
             current.scrollLeft += 300;
         }
     }
-    const galleryImages = [Images.sample_image1, Images.sample_image2, Images.sample_image3]
+    const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
 
     const openWebsite = (url) => {
         window.open(url, "_blank", "noreferrer");
@@ -40,6 +40,7 @@ const InfoBox = () => {
 
     if (isMobile) {
         return (
+            <div className='background_image_phone'>
             <div className='app__bg app__wrapper section__padding'>
 
                 <div className='app__wrapper_info'>
@@ -72,9 +73,11 @@ const InfoBox = () => {
                 </div>
 
             </div>
+            </div>
         )
     } else {
         return (
+            <div className='background_image'>
             <div className='app__bg app__wrapper section__padding'>
                 <div className="app__gallery-images">
                     <div className="app__gallery-images_container" ref={scrollRef}>
@@ -98,6 +101,7 @@ const InfoBox = () => {
                     </p>
                     <p className='infoBox_para'>If you have an event you would like to celebrate with us then get in touch for more info on availability.</p>
                 </div>
+            </div>
             </div>
         )
     }
