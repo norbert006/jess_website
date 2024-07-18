@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Images from '../../assets/Images';
 import private_events_header from '../../assets/button2.svg'
-import SubHeading from '../SubHeading/SubHeading';
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
 import './InfoBox.css'
@@ -44,7 +43,7 @@ const InfoBox = () => {
             <div className='app__bg app__wrapper section__padding'>
 
                 <div className='app__wrapper_info'>
-                <img src={private_events_header} className='infoBox_header'/>
+                <img src={private_events_header} alt="heading_text" className='infoBox_header'/>
 
                     <div className='app__chef-content'>
                         <div className='app__chef-content-quote'>
@@ -95,7 +94,7 @@ const InfoBox = () => {
                 </div>
 
                 <div className='app__wrapper_info infoBox' style={{ marginLeft: '5rem' }}>
-                    <img src={private_events_header} className='infoBox_header'/>
+                    <img src={private_events_header} alt="heading_text" className='infoBox_header'/>
                     <p className='infoBox_para'>Hire us for a private event! We offer packages for hen/stag do's as well as team building. We can offer hand-building,
                         throwing, pottery painting or combination of throwing and pottery painting! 
                     </p>

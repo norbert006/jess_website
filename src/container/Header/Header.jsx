@@ -7,23 +7,22 @@ import sub_header_family from '../../assets/sub_header_family.JPG';
 import button1 from "../../assets/button1.svg"
 import button2 from "../../assets/button2.svg"
 import button3 from "../../assets/button3.svg"
-import SubHeading from '../../components/SubHeading/SubHeading';
 import './Header.css'
 
 const Header = () => (
     <header className='header'>
         <div className='imageContainer'>
-            <img src={header_photo} alt="Clay hands" className='mainImage' />
+            <img src={header_photo} alt="Header_image" className='mainImage' />
         </div>
         <div className='buttonsContainer'>
-            <img src={button1} className='button'/>
-            <img src={button2} className='button'/>
-            <img src={button3} className='button'/>
+            <img src={button1} alt="button" className='button'/>
+            <img src={button2} alt="button" className='button'/>
+            <img src={button3} alt="button" className='button'/>
         </div>
         <div className='thumbnailsContainer'>
-            <img src={sub_header_finger} alt="Thumbnail 1" className='thumbnail' />
-            <img src={sub_header_hen} alt="Thumbnail 2" className='thumbnail' />
-            <img src={sub_header_family} alt="Thumbnail 3" className='thumbnail' />
+            <img src={sub_header_finger} alt="Subheader_image" className='thumbnail' />
+            <img src={sub_header_hen} alt="Subheader_image" className='thumbnail' />
+            <img src={sub_header_family} alt="Subheader_image" className='thumbnail' />
         </div>
     </header>
 
