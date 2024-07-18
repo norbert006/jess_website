@@ -27,22 +27,25 @@ const Header = () => {
     }, []);
 
     const isMobile = width <= 768;
+    const imageWidth = window.innerWidth;
 
     const scrollRef = React.useRef(null)
     const scroll = (direction) => {
         const { current } = scrollRef;
+        if (!current) return; // Add null check
 
         if (direction === 'left') {
             current.scrollLeft -= width;
         } else {
             current.scrollLeft += width;
 
-            if (current.scrollLeft >= current.scrollWidth - current.clientWidth) {
-                current.scrollLeft = 0;
+            if (current.scrollLeft >= current.scrollWidth - current.clientWidth - imageWidth) {
+                setTimeout(() => {
+                    current.scrollTo({ left: 0, behavior: 'smooth' });
+                }, 300);
             }
         }
 
-       
     }
     const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
 
@@ -57,7 +60,7 @@ const Header = () => {
         }, 3000); // Adjust the interval time as needed (e.g., 3000ms for 3 seconds)
 
         return () => clearInterval(interval);
-    }, []);
+    }, [width]);
 
 
     if (isMobile) {
