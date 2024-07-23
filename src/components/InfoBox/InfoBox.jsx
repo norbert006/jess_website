@@ -5,7 +5,7 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 
 import './InfoBox.css'
 
-const InfoBox = () => {
+const InfoBox = ({ privateEventsRef }) => {
     const [width, setWidth] = useState(window.innerWidth);
 
     function handleWindowSizeChange() {
@@ -77,7 +77,7 @@ const InfoBox = () => {
     } else {
         return (
             <div className='background_image'>
-            <div className='app__bg app__wrapper section__padding'>
+            <div className='app__bg app__wrapper section__padding' ref={privateEventsRef}>
                 <div className="app__gallery-images">
                     <div className="app__gallery-images_container" ref={scrollRef}>
                         {galleryImages.map((image, index) => (

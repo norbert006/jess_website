@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import './ContactForm.css'
 
-const ContactForm = () => {
+const ContactForm = ({ contactUsRef }) => {
     const contactFormRef = useRef(null);
     const submitBtnRef = useRef(null);
     const nameInputRef = useRef(null);
@@ -37,7 +37,7 @@ const ContactForm = () => {
     };
 
     return (
-        <section className='contact'>
+        <section className='contact' ref={contactUsRef}>
             <div>
                 <h1>Contact Us</h1>
                 <p>Feel free to send us a message about anything you might need help with. We would love to hear from you!</p>

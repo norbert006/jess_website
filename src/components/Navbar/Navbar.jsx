@@ -4,7 +4,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import clayfulhands_logo from '../../assets/clayfulhands_logo_transparent.png'
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef }) => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [showOverlay, setShowOverlay] = useState(false);
 
@@ -16,17 +16,24 @@ const Navbar = () => {
         }
     }, [toggleMenu]);
 
+    const handleScroll = (ref) => {
+        console.log(ref);
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
-                <a href="#home"><img src={clayfulhands_logo} alt="app_logo" /></a>
+                <a href="#home" onClick={() => handleScroll(logoHomeRef)}><img src={clayfulhands_logo} alt="app_logo" /></a>
             </div>
             <ul className="app__navbar-links">
-                <li className="p__opensans"><a href="#home">HOME</a></li>
+                <li className="p__opensans"><a href="#home" onClick={() => handleScroll(logoHomeRef)}>HOME</a></li>
                 <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
-                <li className="p__opensans"><a href="#about_us">ABOUT US</a></li>
-                <li className="p__opensans"><a href="#private_events">PRIVATE EVENTS</a></li>
-                <li className="p__opensans"><a href="#contact_us">CONTACT US</a></li>
+                <li className="p__opensans"><a href="#about_us" onClick={() => handleScroll(aboutUsRef)}>ABOUT US</a></li>
+                <li className="p__opensans"><a href="#private_events" onClick={() => handleScroll(privateEventsRef)}>PRIVATE EVENTS</a></li>
+                <li className="p__opensans"><a href="#contact_us" onClick={() => handleScroll(contactUsRef)}>CONTACT US</a></li>
             </ul>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#000000" fontSize={27} onClick={() => setToggleMenu(true)} />

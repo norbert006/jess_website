@@ -12,7 +12,7 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 
 import './Header.css'
 
-const Header = () => {
+const Header = ({ logoHomeRef }) => {
 
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -81,7 +81,7 @@ const Header = () => {
     }
     else {
         return (
-            <header className='header'>
+            <header className='header' ref={logoHomeRef}>
                 <div className='imageContainer'>
                     <img src={header_photo} alt="Header_image" className='mainImage' />
                 </div>
