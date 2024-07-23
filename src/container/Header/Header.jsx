@@ -42,7 +42,7 @@ const Header = ({ logoHomeRef }) => {
             if (current.scrollLeft >= current.scrollWidth - current.clientWidth - imageWidth) {
                 setTimeout(() => {
                     current.scrollTo({ left: 0, behavior: 'smooth' });
-                }, 300);
+                }, 3000);
             }
         }
 
