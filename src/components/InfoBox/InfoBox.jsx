@@ -39,7 +39,7 @@ const InfoBox = ({ privateEventsRef }) => {
 
     if (isMobile) {
         return (
-            <div className='background_image_phone'>
+            <div className='background_image_phone' ref={privateEventsRef}>
             <div className='app__bg app__wrapper section__padding'>
 
                 <div className='app__wrapper_info'>

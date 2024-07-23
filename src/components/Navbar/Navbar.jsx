@@ -23,6 +23,14 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef }) => 
         }
     };
 
+    const handleScrollMobile = (ref) => {
+        console.log(ref);
+        if (ref && ref.current) {
+            setToggleMenu(false)
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
@@ -42,11 +50,11 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef }) => 
                     <div className={`app__navbar-smallscreen_overlay flex__center ${toggleMenu ? 'slide-left' : 'slide-right'}`}>
                         <AiOutlineCloseCircle fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
                         <ul className="app__navbar-smallscreen_links">
-                            <li className="p__opensans"><a href="#home">HOME</a></li>
+                            <li className="p__opensans"><a href="#home" onClick={() => handleScrollMobile(logoHomeRef)}>HOME</a></li>
                             <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
-                            <li className="p__opensans"><a href="#about_us">ABOUT US</a></li>
-                            <li className="p__opensans"><a href="#private_events">PRIVATE EVENTS</a></li>
-                            <li className="p__opensans"><a href="#contact_us">CONTACT US</a></li>
+                            <li className="p__opensans"><a href="#about_us" onClick={() => handleScrollMobile(aboutUsRef)}>ABOUT US</a></li>
+                            <li className="p__opensans"><a href="#private_events" onClick={() => handleScrollMobile(privateEventsRef)}>PRIVATE EVENTS</a></li>
+                            <li className="p__opensans"><a href="#contact_us" onClick={() => handleScrollMobile(contactUsRef)}>CONTACT US</a></li>
                         </ul>
                     </div>
                 )}
