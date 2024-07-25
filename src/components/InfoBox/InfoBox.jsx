@@ -18,7 +18,7 @@ const InfoBox = ({ privateEventsRef }) => {
         }
     }, []);
 
-    const isMobile = width <= 768;
+    const isMobile = width <= 1200;
 
     const scrollRef = React.useRef(null)
     const scroll = (direction) => {
