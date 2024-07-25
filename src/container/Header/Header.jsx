@@ -7,6 +7,7 @@ import sub_header_family from '../../assets/sub_header_family.JPG';
 import button1 from "../../assets/button1.svg";
 import button2 from "../../assets/button2.svg";
 import button3 from "../../assets/button3.svg";
+import mobile_header_cover from "../../assets/mobile_header_cover2.svg"
 import Images from "../../assets/Images";
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
@@ -74,6 +75,7 @@ const Header = ({ logoHomeRef }) => {
                                 <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
                             </div>
                         ))}
+                        <img src={mobile_header_cover} alt="Overlay" className="overlay_image" />
                     </div>
                 </div>
             </div>

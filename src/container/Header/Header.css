@@ -112,6 +112,19 @@
   opacity: 1;
 }
 
+.overlay_image {
+  position: absolute;
+  top: 240px;
+  left: 0px;
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+  z-index: 10; /* Make sure it's in front of other elements */
+}
+
+/* Add this to make sure the parent container is positioned correctly */
+.header_gallery_images_container {
+  position: relative;
+}
 
 /* ----------------------------------------------------------- END -----------------------------------------------------------*/
 
