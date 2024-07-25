@@ -126,6 +126,17 @@
   position: relative;
 }
 
+/* Overlay button styling */
+.overlay_button {
+  position: absolute;
+  top: 390px; /* Adjust top position as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 500; /* Make sure it's in front of other elements */
+  pointer-events:all;
+  cursor: pointer;
+}
+
 /* ----------------------------------------------------------- END -----------------------------------------------------------*/
 
 /* .app__header {

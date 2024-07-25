@@ -7,6 +7,7 @@ import sub_header_family from '../../assets/sub_header_family.JPG';
 import button1 from "../../assets/button1.svg";
 import button2 from "../../assets/button2.svg";
 import button3 from "../../assets/button3.svg";
+import book_now_button from "../../assets/book_now_button.svg";
 import mobile_header_cover from "../../assets/mobile_header_cover2.svg"
 import Images from "../../assets/Images";
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
@@ -76,6 +77,7 @@ const Header = ({ logoHomeRef }) => {
                             </div>
                         ))}
                         <img src={mobile_header_cover} alt="Overlay" className="overlay_image" />
+                        <img src={book_now_button} className="overlay_button" onClick={() => openWebsite("https://www.eventbrite.com/e/clayful-hands-ceramic-south-east-tickets-899305536067")} alt="button" />
                     </div>
                 </div>
             </div>
