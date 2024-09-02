@@ -14,9 +14,10 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 
 import './Header.css'
 
-const Header = ({ logoHomeRef }) => {
-
+const Header = ({ logoHomeRef, privateEventsRef }) => {
     const [width, setWidth] = useState(window.innerWidth);
+    const [toggleMenu, setToggleMenu] = useState(false);
+
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -65,6 +66,21 @@ const Header = ({ logoHomeRef }) => {
     }, [width]);
 
 
+    const handleScroll = (ref) => {
+        console.log(ref);
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleScrollMobile = (ref) => {
+        console.log(ref);
+        if (ref && ref.current) {
+            setToggleMenu(false)
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     if (isMobile) {
         return (
             <div className='top_container'>
@@ -91,7 +107,7 @@ const Header = ({ logoHomeRef }) => {
                 </div>
                 <div className='buttonsContainer'>
                     <img src={button1} alt="button" className='button' />
-                    <img src={button2} alt="button" className='button' />
+                    <img src={button2} alt="button" className='button' href="#private_events" onClick={() => handleScroll(privateEventsRef)} />
                     <img src={button3} alt="button" className='button' />
                 </div>
                 <div className='thumbnailsContainer'>
@@ -102,27 +118,6 @@ const Header = ({ logoHomeRef }) => {
             </header>
         )
     }
-
-
-
-
-
-
-    // <div className='app__header app__wrapper section__padding' id="home" style={{ textAlign: 'center' }}>
-    //     <div className='app__wrapper_img'>
-    //         <img src={header_photo} alt='header_img' />
-    //     </div>
-
-    //     <div className='app__wraper_info'>
-    //         <SubHeading title="Shape Your Creativity: Discover Pottery's Unique Flair." />
-    //         <h1 className='app__header-h1'>Master the Art: Pottery Throwing Workshops for Aspiring Potters</h1>
-    //         <p className='p__opensans' style={{ margin: '2rem 0' }}>
-    //             Experience the Joy of Crafting Timeless Pottery Pieces with Expert Guidance and Hands-On Instruction.
-    //         </p>
-    //         <button type="button" className='custom__button'>Explore More</button>
-    //     </div>
-
-    // </div>
 }
 
 export default Header;

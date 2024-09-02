@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef}/>
-      <Header logoHomeRef={logoHomeRef}/>
+      <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef}/>
       <Gallery aboutUsRef={aboutUsRef}/>
       <InfoBox privateEventsRef={privateEventsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
