@@ -37,10 +37,9 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef }) => 
                 <a href="#home" onClick={() => handleScroll(logoHomeRef)}><img src={clayfulhands_logo} alt="app_logo" /></a>
             </div>
             <ul className="app__navbar-links">
-                <li className="p__opensans"><a href="#home" onClick={() => handleScroll(logoHomeRef)}>HOME</a></li>
                 <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
-                <li className="p__opensans"><a href="#about_us" onClick={() => handleScroll(aboutUsRef)}>ABOUT US</a></li>
                 <li className="p__opensans"><a href="#private_events" onClick={() => handleScroll(privateEventsRef)}>PRIVATE EVENTS</a></li>
+                <li className="p__opensans"><a href="#about_us" onClick={() => handleScroll(aboutUsRef)}>ABOUT US</a></li>
                 <li className="p__opensans"><a href="#contact_us" onClick={() => handleScroll(contactUsRef)}>CONTACT US</a></li>
             </ul>
             <div className="app__navbar-smallscreen">

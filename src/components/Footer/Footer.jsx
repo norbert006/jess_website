@@ -11,7 +11,9 @@ const Footer = () => {
             <div className="app__footer-links">
                 <div className="app__footer-links_logo">
                     <img src={clayfulhands_logo_transparent} alt="footer_logo" />
-                    <p className="p__opensans">"This could be a nice little quote"</p>
+                    <p className="p__opensans">"At Clayful Hands, we believe in the magic of creativity, the joy of 
+                        getting messy, and the power of clay to inspire confidence and connection. Whether young or old, 
+                        everyone deserves the time and space to explore, create, and have fun!"</p>
                     {/* <img src={line_breaker} alt="footer_line_breaker" classname="spoon_img" stlye={{marginTop: 15}} /> Find some sort of a linebreaker image */}
                     <div className="app__footer-links_icons">
                         <FiFacebook />

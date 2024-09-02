@@ -40,67 +40,74 @@ const InfoBox = ({ privateEventsRef }) => {
     if (isMobile) {
         return (
             <div className='background_image_phone' ref={privateEventsRef}>
-            <div className='app__bg app__wrapper section__padding'>
+                <div className='app__bg app__wrapper section__padding'>
 
-                <div className='app__wrapper_info'>
-                <img src={private_events_header} alt="heading_text" className='infoBox_header'/>
+                    <div className='app__wrapper_info'>
+                        <img src={private_events_header} alt="heading_text" className='infoBox_header' />
 
-                    <div className='app__chef-content'>
-                        <div className='app__chef-content-quote'>
-                            <p className='p__opensans'>Hire us for a private event! We offer packages for hen/stag do's as well as team building. We can offer hand-building,
-                            throwing, pottery painting or combination of throwing and pottery painting!</p>
+                        <div className='app__chef-content'>
+                            <div className='app__chef-content-quote'>
+                                <p className='p__opensans'>Book a Private Event with Clayful Hands
+                                    Looking for a unique and creative way to celebrate? Whether it's a hen or stag do, 
+                                    team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences 
+                                    just for you. Choose from hand-building, pottery painting, or even a combination of both, 
+                                    including the chance to try your hand at the potter's wheel.
+                                </p>
+                            </div>
+                            <p className='p__opensans'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
                         </div>
-                        <p className='p__opensans'>If you have an event you would like to celebrate with us then get in touch for more info on availability.</p>
+
+                        <div className='app__chef-sign'>
+                            <div className="app__gallery-images" style={{ marginTop: '0rem' }}>
+                                <div className="app__gallery-images_container" ref={scrollRef}>
+                                    {galleryImages.map((image, index) => (
+                                        <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
+                                            <img src={image} alt="gallery" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                                            <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="app__gallery-images_arrows">
+                                    <BsArrowLeftShort transform="shrink-6" className="gallery__arrow-icon" onClick={() => scroll('left')} />
+                                    <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className='app__chef-sign'>
-                        <div className="app__gallery-images" style={{marginTop: '0rem'}}>
-                            <div className="app__gallery-images_container" ref={scrollRef}>
-                                {galleryImages.map((image, index) => (
-                                    <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
-                                        <img src={image} alt="gallery" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
-                                        <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="app__gallery-images_arrows">
-                                <BsArrowLeftShort transform="shrink-6" className="gallery__arrow-icon" onClick={() => scroll('left')} />
-                                <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-            </div>
             </div>
         )
     } else {
         return (
             <div className='background_image'>
-            <div className='app__bg app__wrapper section__padding' ref={privateEventsRef}>
-                <div className="app__gallery-images">
-                    <div className="app__gallery-images_container" ref={scrollRef}>
-                        {galleryImages.map((image, index) => (
-                            <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
-                                <img src={image} alt="gallery" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
-                                <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
-                            </div>
-                        ))}
+                <div className='app__bg app__wrapper section__padding' ref={privateEventsRef}>
+                    <div className="app__gallery-images">
+                        <div className="app__gallery-images_container" ref={scrollRef}>
+                            {galleryImages.map((image, index) => (
+                                <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
+                                    <img src={image} alt="gallery" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                                    <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="app__gallery-images_arrows">
+                            <BsArrowLeftShort transform="shrink-2" className="gallery__arrow-icon" onClick={() => scroll('left')} />
+                            <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
+                        </div>
                     </div>
-                    <div className="app__gallery-images_arrows">
-                        <BsArrowLeftShort transform="shrink-2" className="gallery__arrow-icon" onClick={() => scroll('left')} />
-                        <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
-                    </div>
-                </div>
 
-                <div className='app__wrapper_info infoBox' style={{ marginLeft: '5rem' }}>
-                    <img src={private_events_header} alt="heading_text" className='infoBox_header'/>
-                    <p className='infoBox_para'>Hire us for a private event! We offer packages for hen/stag do's as well as team building. We can offer hand-building,
-                        throwing, pottery painting or combination of throwing and pottery painting! 
-                    </p>
-                    <p className='infoBox_para'>If you have an event you would like to celebrate with us then get in touch for more info on availability.</p>
+                    <div className='app__wrapper_info infoBox' style={{ marginLeft: '5rem' }}>
+                        <img src={private_events_header} alt="heading_text" className='infoBox_header' />
+                        <p className='infoBox_para'>Book a Private Event with Clayful Hands
+                                    Looking for a unique and creative way to celebrate? Whether it's a hen or stag do, 
+                                    team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences 
+                                    just for you. Choose from hand-building, pottery painting, or even a combination of both, 
+                                    including the chance to try your hand at the potter's wheel.
+                        </p>
+                        <p className='infoBox_para'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
+                    </div>
                 </div>
-            </div>
             </div>
         )
     }
