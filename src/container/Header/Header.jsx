@@ -50,7 +50,8 @@ const Header = ({ logoHomeRef, privateEventsRef }) => {
         }
 
     }
-    const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
+    // const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
+    const galleryImages = [sub_header_family, sub_header_finger, sub_header_hen]
 
     const openWebsite = (url) => {
         window.open(url, "_blank", "noreferrer");
@@ -69,14 +70,6 @@ const Header = ({ logoHomeRef, privateEventsRef }) => {
     const handleScroll = (ref) => {
         console.log(ref);
         if (ref && ref.current) {
-            ref.current.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
-    const handleScrollMobile = (ref) => {
-        console.log(ref);
-        if (ref && ref.current) {
-            setToggleMenu(false)
             ref.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
