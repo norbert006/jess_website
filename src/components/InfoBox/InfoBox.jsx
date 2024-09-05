@@ -46,15 +46,15 @@ const InfoBox = ({ privateEventsRef }) => {
                         <img src={private_events_header} alt="heading_text" className='infoBox_header' />
 
                         <div className='app__chef-content'>
-                            <div className='app__chef-content-quote'>
-                                <p className='p__opensans'>Book a Private Event with Clayful Hands
+                            <div className='app__chef-content-quote infoBoxMobile'>
+                                <p className='infoBox_para_mobile'>Book a Private Event with Clayful Hands
                                     Looking for a unique and creative way to celebrate? Whether it's a hen or stag do, 
                                     team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences 
                                     just for you. Choose from hand-building, pottery painting, or even a combination of both, 
                                     including the chance to try your hand at the potter's wheel.
                                 </p>
                             </div>
-                            <p className='p__opensans'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
+                            <p className='infoBox_para_mobile infoBoxMobile'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
                         </div>
 
                         <div className='app__chef-sign'>

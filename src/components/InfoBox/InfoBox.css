@@ -26,18 +26,11 @@
 }
 
 .background_image {
-    background-image: url('../../assets/pink_blob2.svg');
+    background-image: url('../../assets/pink_blob3.svg');
     background-repeat: no-repeat;
-    background-position: -22rem -1rem;
+    background-size: 87%;
+    background-position: -10rem 1rem;
 }
-
-.background_image_phone {
-    background-image: url('../../assets/pink_blob.svg');
-    background-repeat: no-repeat;
-    background-size: 200%;
-    background-position: -2rem 0rem;
-}
-
 
 .infoBox {
     padding: 20px;
@@ -62,6 +55,31 @@
     font-family: "Hammersmith One", sans-serif;
     font-size: 30px;
     line-height: 1.4; /* Adjusted for better spacing */
-    color: var(--color-jess-green);
+    color: #718f74;
     
 }
+
+.infoBoxMobile {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.infoBox_para_mobile {
+    font-family: "Hammersmith One", sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 30px; /* Adjusted for better spacing */
+    font-size: 30px;
+    color: #718f74;
+}
+
+.background_image_phone {
+    background-image: url('../../assets/pink_blob4.svg');
+    background-repeat: no-repeat;
+    background-size: 101%;
+    /* background-position: 0rem 20rem; */
+}
+
