@@ -3,9 +3,10 @@
     flex-direction: column;
     align-items: center;
     padding: 8rem 4rem;
-    background-image: url('../../assets/Blue_wave_background4.svg');
+    background-image: url('../../assets/blue_blob_background2.svg');
     background-repeat: no-repeat;
-    background-position: -6rem -6rem;
+    background-position: -1.5rem 12rem;
+    background-size: 65%;
 }
 
 .about-us-title {
@@ -25,29 +26,9 @@
     width: 100%;
 }
 
-.about-us-text {
-    max-width: 60%;
-    color: #3D1A54; /* Dark purple text color */
-    font-family: 'Hammersmith One', sans-serif; /* Ensure the font is the same as in your design */
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.about-us-text p {
-    color: white;
-    width: 40rem;
-    font-size: 32px;
-    line-height: 1.5;
-}
-
-
 .about-us-logo {
     padding: 3rem;
-    max-width: 35%;
+    max-width: 45%;
 }
 
 .about-us-logo img {
@@ -55,24 +36,83 @@
     height: auto;
 }
 
+.about_para {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 30px;
+    line-height: 1.4; /* Adjusted for better spacing */
+    color: white;
+    max-width: 45%;
+    text-align: center; 
+}
+
 /* Responsive Design */
 @media screen and (min-width: 2000px) {
     .about-us-title {
         font-size: 6rem;
     }
-    .about-us-text p {
-        font-size: 2.5rem;
-        width: 40rem;
+    .about-us-logo {
+        max-width: 50%;
+        padding: 2rem;
+    }
+    .about-us-container {
+        background-position: -25rem 5rem;
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    .about-us-container {
+        background-position: -2rem 12rem;
+        background-size: 67%;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .about-us-container {
+        background-position: -9rem 12rem;
+        background-size: 75%;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .about_para {
+        max-width: 43%;
+    }
+    .about-us-container {
+        background-position: -11rem 10rem;
+        background-size: 80%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .about-us-container {
+        background-size: 85%;
+        background-position: -13rem 10rem;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .about-us-container {
+        background-size: 90%;
+        background-position: -13rem 9rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .about-us-container {
+        background-size: 95%;
+        background-position: -16rem 9rem;
     }
 }
 
 @media screen and (max-width: 1150px) {
-    .about-us-text {
-        margin-left: 5rem;
+    .about-us-logo {
+        max-width: 50%;
+        padding: 2rem;
     }
-    .about-us-text p {
-        font-size: 1.5rem;
-        width: 25rem;
+    .about-us-container {
+        background-position: -25rem -1rem;
+        /* background-size: 145%; */
     }
 }
 
@@ -81,30 +121,22 @@
         flex-direction: column;
         align-items: center;
     }
-    .about-us-text {
-        margin-left: 0;
-        max-width: 100%;
-    }
-    .about-us-text p {
-        width: 80%;
-        font-size: 1.4rem;
-    }
     .about-us-logo {
         max-width: 50%;
         padding: 2rem;
+    }
+    .about_para {
+        max-width: 100%;
+    }
+    .about-us-container {
+        background-position: center 3rem;
+        background-size: 190%;
     }
 }
 
 @media screen and (max-width: 650px) {
     .about-us-title {
         font-size: 3rem;
-    }
-    .about-us-text {
-        max-width: 85%;
-        margin-top: 4rem;
-    }
-    .about-us-text p {
-        font-size: 1.3rem;
     }
     .about-us-logo {
         max-width: 60%;
@@ -113,9 +145,9 @@
         margin-top: 5rem;
     }
     .about-us-container {
-        background-image: url('../../assets/Blue_wave_background4_rotated.svg');
-        background-position: -8rem -13.2rem;
-        background-size: 150% 135%;
+        background-image: url('../../assets/mobile_blob_2.svg');
+        background-size: 110%;
+        background-position: center -2rem;
     }
 }
 
@@ -126,10 +158,6 @@
     .about-us-title {
         font-size: 2.5rem;
         letter-spacing: 0.3rem;
-    }
-    .about-us-text p {
-        width: 100%;
-        font-size: 1.2rem;
     }
     .about-us-logo {
         max-width: 70%;
