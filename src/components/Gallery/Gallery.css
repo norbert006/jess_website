@@ -5,7 +5,7 @@
     padding: 8rem 4rem;
     background-image: url('../../assets/blue_blob_background2.svg');
     background-repeat: no-repeat;
-    background-position: -1.5rem 12rem;
+    background-position: -1.5rem 15rem;
     background-size: 65%;
 }
 
@@ -55,8 +55,8 @@
         padding: 2rem;
     }
     .about-us-container {
-        background-position: -25rem 5rem;
-        background-size: 100%;
+        background-position: -1.5rem 15rem;
+        background-size: 65%;
     }
 }
 
@@ -105,16 +105,66 @@
     }
 }
 
+@media screen and (max-width: 1270px) {
+    .about-us-container {
+        background-size: 110%;
+        background-position: -25rem 6.5rem;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .about-us-container {
+        background-size: 110%;
+        background-position: -22rem 9rem;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .about-us-container {
+        background-size: 110%;
+        background-position: -20rem 9rem;
+    }
+}
+
 @media screen and (max-width: 1150px) {
     .about-us-logo {
         max-width: 50%;
         padding: 2rem;
     }
     .about-us-container {
-        background-position: -25rem -1rem;
-        /* background-size: 145%; */
+        background-size: 130%;
+        background-position: -30rem 9rem;
     }
 }
+
+@media screen and (max-width: 1080px) {
+    .about-us-container {
+        background-size: 150%;
+        background-position: -37rem 7rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .about-us-container {
+        background-size: 165%;
+        background-position: -40rem 7rem;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .about-us-container {
+        background-size: 175%;
+        background-position: -40rem 7rem;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .about-us-container {
+        background-size: 205%;
+        background-position: -40rem 7rem;
+    }
+}
+
 
 @media screen and (max-width: 850px) {
     .about-us-content {
