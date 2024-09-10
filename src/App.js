@@ -6,8 +6,8 @@ import ContactForm from './components/ContactForm/ContactForm';
 import Gallery from './components/Gallery/Gallery';
 import Footer from './components/Footer/Footer';
 import InfoBox from './components/InfoBox/InfoBox';
-import Tester from './components/Tester/Tester';
-import Calendar from './components/Calendar/Calendar';
+import Upcoming from './components/Upcoming/Upcoming';
+
 import './App.css'
 
 const App = () => {
@@ -21,6 +21,7 @@ const App = () => {
       <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef}/>
       <Gallery aboutUsRef={aboutUsRef}/>
       <InfoBox privateEventsRef={privateEventsRef}/>
+      <Upcoming />
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
     </div>
