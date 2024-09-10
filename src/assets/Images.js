@@ -5,8 +5,8 @@ const Images = {
     hen_image1 : require('./hen_image1.JPG'),
     eve_image1 : require('./eve_image1.JPG'),
     sub_header_finger : require('./sub_header_finger.JPG'),
-    clayfulhands_logo_transparent : require('./clayfulhands_logo_transparent.png')
-
+    clayfulhands_logo_transparent : require('./clayfulhands_logo_transparent.png'),
+    pottery_lounge : require('./pottery_lounge.jpg')
 }
 
 export default Images;

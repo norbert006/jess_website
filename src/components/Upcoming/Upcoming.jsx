@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Images from '../../assets/Images';
-import private_events_header from '../../assets/button2.svg'
+import upcoming_header from '../../assets/button1.svg'
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
 import './Upcoming.css'
 
-const InfoBox = ({ privateEventsRef }) => {
+const Upcoming = ({ privateEventsRef }) => {
     const [width, setWidth] = useState(window.innerWidth);
 
     function handleWindowSizeChange() {
@@ -25,12 +25,12 @@ const InfoBox = ({ privateEventsRef }) => {
         const { current } = scrollRef;
 
         if (direction === 'left') {
-            current.scrollLeft -= 300;
+            current.scrollLeft -= 1034;
         } else {
-            current.scrollLeft += 300;
+            current.scrollLeft += 1034;
         }
     }
-    const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
+    const galleryImages = [Images.pottery_lounge, Images.eve_image1, Images.sub_header_finger, Images.sub_header_finger, Images.sub_header_finger, Images.sub_header_finger]
 
     const openWebsite = (url) => {
         window.open(url, "_blank", "noreferrer");
@@ -43,9 +43,31 @@ const InfoBox = ({ privateEventsRef }) => {
         )
     } else {
         return (
-           <h1>IS DESKTOP</h1>
+            <div className='upcoming_bg upcoming__wrapper upcoming_padding' ref={privateEventsRef}>
+                <div className='upcoming__wrapper_info upcoming'>
+                    <img src={upcoming_header} alt="heading_text" className='upcoming_header' />
+                    <p className='upcoming_para'>Upcoming Pottery Events: Get Creative with Clayful Hands!
+                    Discover our latest workshops and experiences—perfect for all skill levels & abilities!
+                    </p>
+                </div>
+
+                <div className="upcoming_gallery_images">
+                    <div className="upcoming_gallery_images_container" ref={scrollRef}>
+                        {galleryImages.map((image, index) => (
+                            <div className="upcoming_gallery_images_card flex__center" key={`gallery_image-${index + 1}`}>
+                                <img src={image} alt="gallery" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                                <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                            </div>
+                        ))}
+                    </div>
+                    <div className="app__gallery-images_arrows">
+                        <BsArrowLeftShort transform="shrink-2" className="gallery__arrow-icon" onClick={() => scroll('left')} />
+                        <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
+                    </div>
+                </div>
+            </div>
         )
     }
 };
 
-export default InfoBox;
+export default Upcoming;

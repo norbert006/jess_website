@@ -1,0 +1,140 @@
+.upcoming_bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.upcoming__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; /* Ensuring the content is stacked vertically */
+    text-align: center; /* Ensure the text is centered */
+}
+
+.upcoming_padding {
+    padding: 4rem 6rem;
+  }
+
+.upcoming__wrapper_info {
+    flex: 1;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.upcoming {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.upcoming_header {
+    padding: 10px 20px; /* Add padding inside the header */
+    display: inline-block; /* Ensure the background color doesn't span the full width */
+    text-align:center;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.upcoming_para {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 30px;
+    line-height: 1.4; /* Adjusted for better spacing */
+    color: #718f74;
+}
+
+.upcoming_gallery_images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 45%;
+    position: relative;
+}
+
+.upcoming_gallery_images_container {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.upcoming_gallery_images_container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.upcoming_gallery_images_card {
+    position: relative;
+    min-width: 1000px; /* Increase the width */
+    height: 1000px; /* Increase the height */
+    margin-left: 2rem;
+}
+
+.upcoming_gallery_images_card img {
+    border: solid var(--color-jess-green) 0.1px; /* Using this so that the hover effect can "retract back" rather than disappearing. */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: border 0.2s ease-in-out;
+}
+
+.upcoming_gallery_images_card:hover img {
+    opacity: 0.75;
+    cursor: pointer;
+    border: solid var(--color-jess-green) 8px;
+    border-radius: 10px;
+}
+
+.upcoming_gallery_images_card:hover .gallery__image-icon {
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 2000px) {
+    /* .upcoming_gallery_images_card {
+        min-width: 400px;
+        height: 550px;
+    } */
+}
+
+@media screen and (max-width: 1150px) {
+    .upcoming__wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .upcoming_gallery_images {
+        max-width: 100%;
+        margin: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .upcoming_padding {
+      padding: 4rem;
+    }
+  }
+
+@media screen and (max-width: 650px) {
+    .upcoming_padding {
+        padding: 4rem 2rem;
+      }
+    .upcoming_gallery_images_card {
+        min-width: 240px;
+        height: 320px;
+    }
+}
