@@ -4,7 +4,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import clayfulhands_logo from '../../assets/clayfulhands_logo_transparent.png'
 import './Navbar.css';
 
-const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef }) => {
+const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcomingEventsRef }) => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [showOverlay, setShowOverlay] = useState(false);
 
@@ -37,7 +37,7 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef }) => 
                 <a href="#home" onClick={() => handleScroll(logoHomeRef)}><img src={clayfulhands_logo} alt="app_logo" /></a>
             </div>
             <ul className="app__navbar-links">
-                <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
+                <li className="p__opensans"><a href="#upcoming" onClick={() => handleScroll(upcomingEventsRef)}>UPCOMING</a></li>
                 <li className="p__opensans"><a href="#private_events" onClick={() => handleScroll(privateEventsRef)}>PRIVATE EVENTS</a></li>
                 <li className="p__opensans"><a href="#about_us" onClick={() => handleScroll(aboutUsRef)}>ABOUT US</a></li>
                 <li className="p__opensans"><a href="#contact_us" onClick={() => handleScroll(contactUsRef)}>CONTACT US</a></li>

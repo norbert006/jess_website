@@ -77,8 +77,8 @@
 
 .upcoming_gallery_images_card {
     position: relative;
-    min-width: 1000px; /* Increase the width */
-    height: 1000px; /* Increase the height */
+    min-width: 930px; /* Increase the width */
+    height: 950px; /* Increase the height */
     margin-left: 2rem;
 }
 

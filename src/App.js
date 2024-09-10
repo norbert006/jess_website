@@ -15,13 +15,14 @@ const App = () => {
   const privateEventsRef = useRef(null);
   const logoHomeRef = useRef(null);
   const contactUsRef = useRef(null);
+  const upcomingEventsRef = useRef(null);
   return (
     <div>
-      <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef}/>
-      <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef}/>
+      <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} upcomingEventsRef={upcomingEventsRef}/>
+      <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
       <Gallery aboutUsRef={aboutUsRef}/>
       <InfoBox privateEventsRef={privateEventsRef}/>
-      <Upcoming />
+      <Upcoming upcomingEventsRef={upcomingEventsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
     </div>

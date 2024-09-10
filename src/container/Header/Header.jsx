@@ -14,7 +14,7 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 
 import './Header.css'
 
-const Header = ({ logoHomeRef, privateEventsRef }) => {
+const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
     const [width, setWidth] = useState(window.innerWidth);
     const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -99,7 +99,7 @@ const Header = ({ logoHomeRef, privateEventsRef }) => {
                     <img src={header_photo} alt="Header_image" className='mainImage' />
                 </div>
                 <div className='buttonsContainer'>
-                    <img src={button1} alt="button" className='button' />
+                    <img src={button1} alt="button" className='button' href="#upcoming" onClick={() => handleScroll(upcomingEventsRef)}/>
                     <img src={button2} alt="button" className='button' href="#private_events" onClick={() => handleScroll(privateEventsRef)} />
                     <img src={button3} alt="button" className='button' />
                 </div>

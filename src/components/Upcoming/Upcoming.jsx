@@ -5,7 +5,7 @@ import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs
 
 import './Upcoming.css'
 
-const Upcoming = ({ privateEventsRef }) => {
+const Upcoming = ({ upcomingEventsRef }) => {
     const [width, setWidth] = useState(window.innerWidth);
 
     function handleWindowSizeChange() {
@@ -25,9 +25,9 @@ const Upcoming = ({ privateEventsRef }) => {
         const { current } = scrollRef;
 
         if (direction === 'left') {
-            current.scrollLeft -= 1034;
+            current.scrollLeft -= 964;
         } else {
-            current.scrollLeft += 1034;
+            current.scrollLeft += 964;
         }
     }
     const galleryImages = [Images.pottery_lounge, Images.eve_image1, Images.sub_header_finger, Images.sub_header_finger, Images.sub_header_finger, Images.sub_header_finger]
@@ -43,7 +43,7 @@ const Upcoming = ({ privateEventsRef }) => {
         )
     } else {
         return (
-            <div className='upcoming_bg upcoming__wrapper upcoming_padding' ref={privateEventsRef}>
+            <div className='upcoming_bg upcoming__wrapper upcoming_padding' ref={upcomingEventsRef}>
                 <div className='upcoming__wrapper_info upcoming'>
                     <img src={upcoming_header} alt="heading_text" className='upcoming_header' />
                     <p className='upcoming_para'>Upcoming Pottery Events: Get Creative with Clayful Hands!
