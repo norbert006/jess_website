@@ -175,10 +175,30 @@
 }
 
 .gallery-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.gallery-item img{
+    border: solid var(--color-jess-green) 0.1px;
+    object-fit: cover;
+    opacity: 1;
+    transition: border 0.2s ease-in-out;
+    
+}
+
+.gallery-item:hover img {
+    opacity: 0.75;
+    cursor: pointer;
+    border: solid var(--color-jess-green) 8px;
+    border-radius: 10px;
+}
+
+.gallery-item:hover .gallery__image-icon {
+    opacity: 1;
 }
 
 .image-details {
