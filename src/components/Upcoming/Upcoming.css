@@ -156,11 +156,11 @@
 }
 
 .gallery-container {
+    margin-top: 2rem;
+    justify-content: center; /* Center the images horizontally */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 columns */
-    gap: 16px;
-    /* Space between images */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 16px; /* Space between images */
 }
 
 .gallery-image {

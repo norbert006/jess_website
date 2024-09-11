@@ -67,7 +67,7 @@ const Upcoming = ({ upcomingEventsRef }) => {
             <div className='background_image_phone' ref={upcomingEventsRef}>
                 <div className='upcoming_bg upcoming__wrapper upcoming_padding'>
 
-                    <div className='upcoming_wrapper_info'>
+                    <div className='upcoming_wrapper_info_mobile'>
                         <img src={upcoming_header} alt="heading_text" className='upcoming_header' />
 
                         <div className='upcoming_content'>
