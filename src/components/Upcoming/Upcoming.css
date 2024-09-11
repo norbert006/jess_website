@@ -10,13 +10,15 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    flex-direction: column; /* Ensuring the content is stacked vertically */
-    text-align: center; /* Ensure the text is centered */
+    flex-direction: column;
+    /* Ensuring the content is stacked vertically */
+    text-align: center;
+    /* Ensure the text is centered */
 }
 
 .upcoming_padding {
     padding: 4rem 6rem;
-  }
+}
 
 .upcoming_wrapper_info {
     flex: 1;
@@ -38,9 +40,11 @@
 }
 
 .upcoming_header {
-    padding: 10px 20px; /* Add padding inside the header */
-    display: inline-block; /* Ensure the background color doesn't span the full width */
-    text-align:center;
+    padding: 10px 20px;
+    /* Add padding inside the header */
+    display: inline-block;
+    /* Ensure the background color doesn't span the full width */
+    text-align: center;
     margin: auto;
     margin-bottom: 2rem;
     width: 100%;
@@ -49,7 +53,8 @@
 .upcoming_para {
     font-family: "Hammersmith One", sans-serif;
     font-size: 30px;
-    line-height: 1.4; /* Adjusted for better spacing */
+    line-height: 1.4;
+    /* Adjusted for better spacing */
     color: #718f74;
 }
 
@@ -77,13 +82,16 @@
 
 .upcoming_gallery_images_card {
     position: relative;
-    min-width: 930px; /* Increase the width */
-    height: 950px; /* Increase the height */
+    min-width: 930px;
+    /* Increase the width */
+    height: 950px;
+    /* Increase the height */
     margin-left: 2rem;
 }
 
 .upcoming_gallery_images_card img {
-    border: solid var(--color-jess-green) 0.1px; /* Using this so that the hover effect can "retract back" rather than disappearing. */
+    border: solid var(--color-jess-green) 0.1px;
+    /* Using this so that the hover effect can "retract back" rather than disappearing. */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -127,7 +135,8 @@
 .upcoming_para_mobile {
     font-family: "Hammersmith One", sans-serif;
     letter-spacing: 0.04em;
-    line-height: 30px; /* Adjusted for better spacing */
+    line-height: 30px;
+    /* Adjusted for better spacing */
     font-size: 30px;
     color: #718f74;
 }
@@ -144,6 +153,51 @@
     line-height: 41px;
     letter-spacing: 0.04em;
     text-transform: capitalize;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 16px;
+    /* Space between images */
+}
+
+.gallery-image {
+    width: 100%;
+    /* Ensure the image takes up the full width of the grid cell */
+    height: 300px;
+    /* Set a fixed height for uniform size */
+    object-fit: cover;
+    /* Crop images to fill the container while preserving aspect ratio */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-details {
+    margin-top: 8px;
+    /* Space between image and text */
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Maintain 2 columns on tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        /* Stack images in a single column on mobile */
+    }
 }
 
 @media screen and (min-width: 2000px) {
@@ -168,14 +222,15 @@
 
 @media screen and (max-width: 850px) {
     .upcoming_padding {
-      padding: 4rem;
+        padding: 4rem;
     }
-  }
+}
 
 @media screen and (max-width: 650px) {
     .upcoming_padding {
         padding: 4rem 2rem;
-      }
+    }
+
     .upcoming_gallery_images_card {
         min-width: 240px;
         height: 320px;
