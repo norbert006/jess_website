@@ -18,9 +18,9 @@
     padding: 4rem 6rem;
   }
 
-.upcoming__wrapper_info {
+.upcoming_wrapper_info {
     flex: 1;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -102,6 +102,49 @@
     opacity: 1;
 }
 
+.upcoming_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.upcoming_content_quote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.upcomingMobile {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.upcoming_para_mobile {
+    font-family: "Hammersmith One", sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 30px; /* Adjusted for better spacing */
+    font-size: 30px;
+    color: #718f74;
+}
+
+.upcoming_chef_sign {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.upcoming_chef_sign p:first-child {
+    font-family: var(--font-base);
+    font-weight: 400;
+    font-size: 32;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+}
 
 @media screen and (min-width: 2000px) {
     /* .upcoming_gallery_images_card {
