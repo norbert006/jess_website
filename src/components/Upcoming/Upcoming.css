@@ -186,19 +186,7 @@
     /* Space between image and text */
 }
 
-@media (max-width: 768px) {
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* Maintain 2 columns on tablet */
-    }
-}
 
-@media (max-width: 480px) {
-    .gallery-container {
-        grid-template-columns: 1fr;
-        /* Stack images in a single column on mobile */
-    }
-}
 
 @media screen and (min-width: 2000px) {
     /* .upcoming_gallery_images_card {
@@ -207,22 +195,55 @@
     } */
 }
 
-@media screen and (max-width: 1150px) {
-    .upcoming__wrapper {
-        flex-direction: column;
+@media screen and (max-width: 1200px) {
+    .gallery-image {
+        height: 450px;
     }
 }
 
 @media screen and (max-width: 1150px) {
+    .upcoming__wrapper {
+        flex-direction: column;
+    }
     .upcoming_gallery_images {
         max-width: 100%;
         margin: 5rem 0;
     }
 }
 
+@media screen and (max-width: 1030px) {
+    .gallery-image {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .gallery-image {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .gallery-image {
+        height: 350px;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .upcoming_padding {
         padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on tablet */
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .gallery-image {
+        height: 300px;
     }
 }
 
@@ -234,5 +255,45 @@
     .upcoming_gallery_images_card {
         min-width: 240px;
         height: 320px;
+    }
+}
+
+
+@media screen and (min-width: 541px) and (max-width: 649px) {
+    .gallery-image {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 540px) {
+    .gallery-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Stack images in a single column on mobile */
+    }
+    .gallery-image {
+        height: 360px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .gallery-image {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .gallery-image {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .gallery-image {
+        height: 200px;
     }
 }
