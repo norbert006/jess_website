@@ -49,7 +49,7 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcom
                     <div className={`app__navbar-smallscreen_overlay flex__center ${toggleMenu ? 'slide-left' : 'slide-right'}`}>
                         <AiOutlineCloseCircle fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
                         <ul className="app__navbar-smallscreen_links">
-                            <li className="p__opensans"><a href="#upcoming">UPCOMING</a></li>
+                            <li className="p__opensans"><a href="#upcoming" onClick={() => handleScrollMobile(upcomingEventsRef)}>UPCOMING</a></li>
                             <li className="p__opensans"><a href="#about_us" onClick={() => handleScrollMobile(aboutUsRef)}>ABOUT US</a></li>
                             <li className="p__opensans"><a href="#private_events" onClick={() => handleScrollMobile(privateEventsRef)}>PRIVATE EVENTS</a></li>
                             <li className="p__opensans"><a href="#contact_us" onClick={() => handleScrollMobile(contactUsRef)}>CONTACT US</a></li>

@@ -86,7 +86,7 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
                             </div>
                         ))}
                         <img src={mobile_header_cover} alt="Overlay" className="overlay_image" />
-                        <img src={book_now_button} className="overlay_button" onClick={() => openWebsite("https://www.eventbrite.com/e/clayful-hands-ceramic-south-east-tickets-899305536067")} alt="button" />
+                        <img src={book_now_button} className="overlay_button" onClick={() => openWebsite("https://www.eventbrite.co.uk/o/clayful-hands-84035095573")} alt="button" />
                     </div>
                 </div>
             </div>
