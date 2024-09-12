@@ -90,7 +90,7 @@ const Upcoming = ({ upcomingEventsRef }) => {
                             {galleryImages.map((item, index) => (
                                 <div key={index} className="gallery-item flex__center">
                                     <img src={item.image} alt={item.name} className="gallery-image" onClick={() => openWebsite(item.url)}/>
-                                    <BsInstagram className="gallery__image-icon" onClick={() => openWebsite(item.url)} />
+                                    <BsInstagram className="gallery__image-icon" onClick={() => openWebsite(item.url)} style={{ color: "var(--color-jess-green)" }}/>
                                     <div className="image-details">
                                         <h3 className="image-title">{item.title}</h3>
                                         <p className="image-name">{item.name}</p>
@@ -119,13 +119,13 @@ const Upcoming = ({ upcomingEventsRef }) => {
                         {galleryImages.map((item, index) => (
                             <div className="upcoming_gallery_images_card flex__center" key={`gallery_image-${index + 1}`}>
                                 <img src={item.image} alt="gallery" onClick={() => openWebsite(item.url)} />
-                                <BsInstagram className="gallery__image-icon" onClick={() => openWebsite(item.url)} />
+                                <BsInstagram className="gallery__image-icon" onClick={() => openWebsite(item.url)} style={{ color: "var(--color-jess-green)" }}/>
                             </div>
                         ))}
                     </div>
                     <div className="app__gallery-images_arrows">
-                        <BsArrowLeftShort transform="shrink-2" className="gallery__arrow-icon" onClick={() => scroll('left')} />
-                        <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
+                        <BsArrowLeftShort transform="shrink-2" className="gallery__arrow-icon" onClick={() => scroll('left')} style={{ backgroundColor: "var(--color-jess-green)" }}/>
+                        <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} style={{ backgroundColor: "var(--color-jess-green)" }}/>
                     </div>
                 </div>
             </div>

@@ -207,14 +207,6 @@
 }
 
 
-
-@media screen and (min-width: 2000px) {
-    /* .upcoming_gallery_images_card {
-        min-width: 400px;
-        height: 550px;
-    } */
-}
-
 @media screen and (max-width: 1200px) {
     .gallery-image {
         height: 450px;
