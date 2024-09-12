@@ -82,3 +82,49 @@
     /* background-position: 0rem 20rem; */
 }
 
+@media screen and (max-width: 1620px) {
+    .background_image {
+        background-size: 100%;
+        background-position: -10rem 10rem;
+    }
+    .infoBox_header {
+        width: 120%;
+    }
+    .infoBox_para {
+        margin-left: 2rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .background_image {
+        background-size: 100%;
+        background-position: -10rem 15rem;
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    .background_image {
+        background-size: 100%;
+        background-position: -10rem 15rem;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .background_image {
+        background-size: 100%;
+        background-position: -10rem 25rem;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .infoBox_header {
+        width: 100%;
+    }
+
+}
+
+
+
