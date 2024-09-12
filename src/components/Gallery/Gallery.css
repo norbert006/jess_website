@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     padding: 8rem 4rem;
-    background-image: url('../../assets/blue_blob_background2.svg');
+    background-image: url('../../assets/blue_blob_background3.svg');
     background-repeat: no-repeat;
-    background-position: -1.5rem 15rem;
-    background-size: 65%;
+    background-position: -1.5rem 8rem;
+    background-size: 100%;
 }
 
 .about-us-title {
-    font-size: 4rem;
+    font-size: 6rem;
     color: var(--color-jess-pink); /* Light brown color for "ABOUT US" */
     text-align: center;
     font-family: "Hammersmith One", sans-serif;
@@ -27,143 +27,211 @@
 }
 
 .about-us-logo {
+    max-width: 50%;
     padding: 3rem;
-    max-width: 45%;
 }
 
 .about-us-logo img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    margin-left: 10rem;
 }
 
 .about_para {
     font-family: "Hammersmith One", sans-serif;
-    font-size: 30px;
+    font-size: 42px;
     line-height: 1.4; /* Adjusted for better spacing */
     color: white;
-    max-width: 45%;
-    text-align: center; 
+    max-width: 32%;
+    text-align: center;
+    margin-left: 12rem;
+    margin-top: 15rem;
 }
 
 /* Responsive Design */
-@media screen and (min-width: 2000px) {
-    .about-us-title {
-        font-size: 6rem;
-    }
-    .about-us-logo {
-        max-width: 50%;
-        padding: 2rem;
-    }
+
+@media screen and (max-width: 2250px) {
     .about-us-container {
-        background-position: -1.5rem 15rem;
-        background-size: 65%;
+        background-position: -1.5rem 6rem;
+        background-size: 105%;
     }
 }
 
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 2185px) {
     .about-us-container {
-        background-position: -2rem 12rem;
-        background-size: 67%;
-    }
-}
-
-@media screen and (max-width: 1650px) {
-    .about-us-container {
-        background-position: -9rem 12rem;
-        background-size: 75%;
-    }
-}
-
-@media screen and (max-width: 1550px) {
-    .about_para {
-        max-width: 43%;
-    }
-    .about-us-container {
-        background-position: -11rem 10rem;
-        background-size: 80%;
-    }
-}
-
-@media screen and (max-width: 1450px) {
-    .about-us-container {
-        background-size: 85%;
-        background-position: -13rem 10rem;
-    }
-}
-
-@media screen and (max-width: 1450px) {
-    .about-us-container {
-        background-size: 90%;
-        background-position: -13rem 9rem;
-    }
-}
-
-@media screen and (max-width: 1350px) {
-    .about-us-container {
-        background-size: 95%;
-        background-position: -16rem 9rem;
-    }
-}
-
-@media screen and (max-width: 1270px) {
-    .about-us-container {
+        background-position: -1.5rem 6rem;
         background-size: 110%;
-        background-position: -25rem 6.5rem;
     }
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 2085px) {
     .about-us-container {
-        background-size: 110%;
-        background-position: -22rem 9rem;
+        background-position: -8rem 6rem;
+        background-size: 115%;
     }
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 2045px) {
     .about-us-container {
-        background-size: 110%;
-        background-position: -20rem 9rem;
+        background-position: -8rem 6rem;
+        background-size: 120%;
     }
 }
 
-@media screen and (max-width: 1150px) {
-    .about-us-logo {
-        max-width: 50%;
-        padding: 2rem;
-    }
+@media screen and (max-width: 2045px) {
     .about-us-container {
+        background-position: -8rem 6rem;
         background-size: 130%;
-        background-position: -30rem 9rem;
+    }
+    .about_para {
+        max-width: 34%;
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1900px) {
     .about-us-container {
+        background-position: -12rem 6rem;
+        background-size: 140%;
+    }
+    .about-us-logo img {
+        width: 100%;
+        margin-left: 10rem;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .about-us-container {
+        background-position: -18rem 6rem;
         background-size: 150%;
-        background-position: -37rem 7rem;
+    }
+    .about_para {
+        max-width: 38%;
+    }
+    .about-us-logo img {
+        width: 110%;
+        margin-left: 6rem;
     }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1700px) {
     .about-us-container {
-        background-size: 165%;
-        background-position: -40rem 7rem;
+        background-position: -18rem 6rem;
+        background-size: 160%;
     }
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1615px) {
     .about-us-container {
-        background-size: 175%;
-        background-position: -40rem 7rem;
+        background-position: -18rem 2rem;
+        background-size: 170%;
+    }
+    .about_para {
+        max-width: 44%;
+        margin-left: 8rem;
+        margin-top: 10rem;
+    }
+    .about-us-logo img {
+        width: 140%;
+        margin-left: -2rem;
     }
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1460px) {
     .about-us-container {
-        background-size: 205%;
-        background-position: -40rem 7rem;
+        background-position: -24rem 2rem;
+        background-size: 180%;
+    }
+    .about_para {
+        max-width: 50%;
+        margin-left: 4rem;
+        margin-top: 10rem;
     }
 }
+
+@media screen and (max-width: 1340px) {
+    .about-us-container {
+        background-position: -24rem 2rem;
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .about-us-container {
+        background-position: -24rem 0rem;
+        background-size: 200%;
+    }
+    .about_para {
+        max-width: 60%;
+        margin-left: 0rem;
+        margin-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .about-us-container {
+        background-position: -24rem 0rem;
+        background-size: 210%;
+    }
+}
+
+
+@media screen and (max-width: 1135px) {
+    .about-us-container {
+        background-position: -26rem -2rem;
+        background-size: 220%;
+    }
+    .about_para {
+        font-size: 38px;
+    }
+    .about-us-logo img {
+        width: 160%;
+        margin-left: -2rem;
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .about-us-container {
+        background-position: -26rem 2rem;
+        background-size: 220%;
+    }
+}
+
+@media screen and (max-width: 1005px) {
+    .about-us-container {
+        background-position: -30rem 2rem;
+        background-size: 240%;
+    }
+    .about_para {
+        font-size: 36px;
+        max-width: 70%;
+    }
+    .about-us-logo img {
+        width: 180%;
+        margin-left: -4rem;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .about-us-container {
+        background-position: -34rem 2rem;
+        background-size: 260%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about-us-container {
+        background-position: -34rem 2rem;
+        background-size: 280%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .about-us-container {
+        background-position: -34rem 2rem;
+        background-size: 300%;
+    }
+}
+
 
 
 @media screen and (max-width: 850px) {
@@ -179,25 +247,52 @@
         max-width: 100%;
     }
     .about-us-container {
-        background-position: center 3rem;
-        background-size: 190%;
+        background-position: -28rem -2rem;
+        background-size: 320%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .about-us-container {
+        background-position: -28rem -2rem;
+        background-size: 340%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .about-us-container {
+        background-position: -28rem -2rem;
+        background-size: 350%;
+    }
+}
+
+@media screen and (max-width: 662px) {
+    .about-us-container {
+        background-position: -28rem 8rem;
     }
 }
 
 @media screen and (max-width: 650px) {
+    .about-us-content {
+        margin-top: -4rem;
+    }
     .about-us-title {
-        font-size: 3rem;
+        font-size: 6rem;
     }
     .about-us-logo {
-        max-width: 60%;
+        max-width: 80%;
     }
     .about-us-logo img {
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
     .about-us-container {
         background-image: url('../../assets/mobile_blob_2.svg');
-        background-size: 110%;
-        background-position: center -2rem;
+        background-size: cover;
+        background-position: center 4rem;
+        padding-bottom: 2rem;
+    }
+    .about_para {
+        font-size: 32px;
     }
 }
 
@@ -206,12 +301,16 @@
         padding: 2rem;
     }
     .about-us-title {
-        font-size: 2.5rem;
+        margin-top: 5rem;
+        font-size: 4rem;
         letter-spacing: 0.3rem;
     }
     .about-us-logo {
         max-width: 70%;
         padding: 1rem;
+    }
+    .about_para {
+
     }
 }
 

@@ -6,6 +6,7 @@ const Images = {
     eve_image1 : require('./eve_image1.JPG'),
     sub_header_finger : require('./sub_header_finger.JPG'),
     clayfulhands_logo_transparent : require('./clayfulhands_logo_transparent.png'),
+    clayfulhands_logo_transparent2 : require('./clayfulhands_logo_transparent2.svg'),
     pottery_lounge : require('./pottery_lounge.jpg')
 }
 

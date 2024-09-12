@@ -1,9 +1,7 @@
 import React, { useEffect }from "react";
-import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
-import SubHeading from '../../components/SubHeading/SubHeading';
-import Images from "../../assets/Images"
 import './Gallery.css';
 import '../InfoBox/InfoBox.css'
+import clayfulhands_logo_transparent2 from '../../assets/clayfulhands_logo_transparent2.svg'
 
 const Gallery = ({ aboutUsRef }) => {
     console.log("width = ", window.innerWidth)
@@ -21,7 +19,7 @@ const Gallery = ({ aboutUsRef }) => {
 
                 </div>
                 <div className="about-us-logo">
-                    <img src={Images.clayfulhands_logo_transparent} alt="Clayful Hands Logo" />
+                    <img src={clayfulhands_logo_transparent2} alt="Clayful Hands Logo" />
                 </div>
             </div>
         </div>
