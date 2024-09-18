@@ -46,7 +46,6 @@ const ContactForm = ({ contactUsRef }) => {
         alignItems: 'center',     // Center the content vertically (in case they have different heights)
         textDecoration: 'none',
         color: '#25D366',
-        fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
       };
     
