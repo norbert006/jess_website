@@ -65,13 +65,14 @@ const ContactForm = ({ contactUsRef }) => {
                 <a href={whatsappURL} target="_blank" rel="noopener noreferrer" style={linkStyle}>
                     <FaWhatsapp size={50} style={iconStyle}/>
                     <i className="fab fa-whatsapp"></i>{'+44707327739'}
-                    <br></br>
                 </a>
                 </div>
-
                 <br></br>
 
-                <h3>Send us an Email</h3>
+                <h3>Send us an Email: clayfulhandsuk@gmail.com</h3>
+                <h4>Or fill in the from below</h4>
+                <br></br>
+
                 <form ref={contactFormRef} onSubmit={handleSubmit}>
 
                     <label htmlFor="user_name">Name</label>
