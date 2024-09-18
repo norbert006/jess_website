@@ -1,8 +1,13 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import './ContactForm.css'
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactForm = ({ contactUsRef }) => {
+    const formattedPhone = '+447707327739'
+    const whatsappURL = `https://wa.me/${formattedPhone}?text=${encodeURIComponent('Meesage us!')}`;
+
+
     const contactFormRef = useRef(null);
     const submitBtnRef = useRef(null);
     const nameInputRef = useRef(null);
@@ -36,11 +41,38 @@ const ContactForm = ({ contactUsRef }) => {
             });
     };
 
+    const linkStyle = {
+        display: 'flex',       // Flexbox to align items horizontally
+        alignItems: 'center',     // Center the content vertically (in case they have different heights)
+        textDecoration: 'none',
+        color: '#25D366',
+        fontFamily: 'Arial, sans-serif',
+        fontSize: '18px',
+      };
+    
+      const iconStyle = {
+        marginRight: '10px',   // Adds space between icon and text
+      };
+
     return (
         <section className='contact' ref={contactUsRef}>
             <div>
                 <h1>Contact Us</h1>
                 <p>Feel free to send us a message about anything you might need help with. We would love to hear from you!</p>
+
+                <h3>Message us on Whatsapp</h3>
+                <br></br>
+                <div>
+                <a href={whatsappURL} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                    <FaWhatsapp size={50} style={iconStyle}/>
+                    <i className="fab fa-whatsapp"></i>{'+44707327739'}
+                    <br></br>
+                </a>
+                </div>
+
+                <br></br>
+
+                <h3>Send us an Email</h3>
                 <form ref={contactFormRef} onSubmit={handleSubmit}>
 
                     <label htmlFor="user_name">Name</label>
@@ -53,7 +85,7 @@ const ContactForm = ({ contactUsRef }) => {
                         required
                     />
 
-                    <label htmlFor="user_email">Email</label>
+                    <label htmlFor="user_email">Your Email</label>
                     <input
                         type="email"
                         id="user_email"
