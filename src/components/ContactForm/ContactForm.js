@@ -54,7 +54,7 @@ const ContactForm = ({ contactUsRef }) => {
                     <a href={whatsappURL} target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', marginRight: '10px' }}>
                         <FaWhatsapp size={50} />
                     </a>
-                    <p style={{ margin: 0, fontSize: '18px', color: '#0b238e'}}>+447707327739</p>
+                    <a href='tel:+447707327739' rel='noopener' style={{ margin: 0, fontSize: '18px', color: '#0b238e'}}>+447707327739</a>
                 </div>
                 <br />
 
