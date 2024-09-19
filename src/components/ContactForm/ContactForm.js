@@ -41,17 +41,6 @@ const ContactForm = ({ contactUsRef }) => {
             });
     };
 
-    const linkStyle = {
-        display: 'flex',       // Flexbox to align items horizontally
-        alignItems: 'center',     // Center the content vertically (in case they have different heights)
-        textDecoration: 'none',
-        color: '#25D366',
-        fontSize: '18px',
-      };
-    
-      const iconStyle = {
-        marginRight: '10px',   // Adds space between icon and text
-      };
 
     return (
         <section className='contact' ref={contactUsRef}>
@@ -60,14 +49,14 @@ const ContactForm = ({ contactUsRef }) => {
                 <p>Feel free to send us a message about anything you might need help with. We would love to hear from you!</p>
 
                 <h3>Message us on Whatsapp</h3>
-                <br></br>
-                <div>
-                <a href={whatsappURL} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-                    <FaWhatsapp size={50} style={iconStyle}/>
-                    <i className="fab fa-whatsapp"></i>{'+44707327739'}
-                </a>
+                <br />
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <a href={whatsappURL} target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', marginRight: '10px' }}>
+                        <FaWhatsapp size={50} />
+                    </a>
+                    <p style={{ margin: 0, fontSize: '18px', color: '#0b238e'}}>+447707327739</p>
                 </div>
-                <br></br>
+                <br />
 
                 <h3>Send us an Email: clayfulhandsuk@gmail.com</h3>
                 <h4>Or fill in the from below</h4>
