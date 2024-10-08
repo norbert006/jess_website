@@ -7,7 +7,13 @@ const Images = {
     sub_header_finger : require('./sub_header_finger.JPG'),
     clayfulhands_logo_transparent : require('./clayfulhands_logo_transparent.png'),
     clayfulhands_logo_transparent2 : require('./clayfulhands_logo_transparent2.svg'),
-    pottery_lounge : require('./pottery_lounge.jpg')
+    pottery_lounge : require('./pottery_lounge.jpg'),
+    four_week_pottery : require('./4_week_pottery.jpg'),
+    clay_club_halloween : require('./clay_club_halloween.jpg'),
+    october_pottery_lounge : require('./october_pottery_lounge.jpg'),
+    november_pottery_lounge : require('./november_pottery_lounge.jpg')
+
 }
 
 export default Images;
+
