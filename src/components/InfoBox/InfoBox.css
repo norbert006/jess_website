@@ -54,7 +54,7 @@
     font-family: "Hammersmith One", sans-serif;
     font-size: 1.8rem;
     line-height: 1.4; /* Adjusted for better spacing */
-    color: #718f74;
+    color: var(--color-jess-blue);
 }
 
 .infoBoxMobile {

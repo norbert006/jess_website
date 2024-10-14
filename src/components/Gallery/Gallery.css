@@ -44,7 +44,7 @@
     font-size: 1.8rem;
     line-height: 1.4; /* Adjusted for better spacing */
     /* color: white; */
-    color: black;
+    color: var(--color-jess-pink);
     max-width: 32%;
     text-align: center;
     margin-left: 12rem;
