@@ -10,6 +10,10 @@
     padding-top: 0;
 }
 
+.app__footer p {
+    line-height: normal;
+}
+
 .app__footer-links {
     width: 100%;
     display: flex;

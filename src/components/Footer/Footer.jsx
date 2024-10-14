@@ -1,10 +1,13 @@
 import React from "react";
-import clayfulhands_logo from '../../assets/clayfulhands_logo.png'
 import clayfulhands_logo_white from '../../assets/ClayfulWhite.png'
 import { FiFacebook, FiInstagram } from 'react-icons/fi'
 import './Footer.css'
 
 const Footer = () => {
+
+    const openWebsite = (url) => {
+        window.open(url, "_blank", "noreferrer");
+    };
 
     return (
         <div className="app__footer section__padding">
@@ -16,8 +19,8 @@ const Footer = () => {
                         everyone deserves the time and space to explore, create, and have fun!"</p>
                     <div className="app__footer-links_icons" style={{ color: 'aliceblue' }}>
                     <br></br>
-                        <FiFacebook />
-                        <FiInstagram />
+                        <FiFacebook style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.facebook.com/clayfulhands/")}/>
+                        <FiInstagram style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")}/>
                     </div>
 
                 </div>

@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Hammersmith One', 'Courier New', Courier, monospace;
 }
@@ -26,6 +25,10 @@
 
 .contact h1 {
     font-size: 2.5em;
+}
+
+.contact h2 {
+    max-width: 400px;
 }
 
 .contact p {
