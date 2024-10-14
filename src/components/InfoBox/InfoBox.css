@@ -19,7 +19,6 @@
 .app__chef-sign p:first-child {
     font-family: var(--font-base);
     font-weight: 400;
-    font-size: 32;
     line-height: 41px;
     letter-spacing: 0.04em;
     text-transform: capitalize;
@@ -53,7 +52,7 @@
 
 .infoBox_para {
     font-family: "Hammersmith One", sans-serif;
-    font-size: 30px;
+    font-size: 1.8rem;
     line-height: 1.4; /* Adjusted for better spacing */
     color: #718f74;
 }
@@ -70,13 +69,13 @@
 .infoBox_para_mobile {
     font-family: "Hammersmith One", sans-serif;
     letter-spacing: 0.04em;
-    line-height: 30px; /* Adjusted for better spacing */
-    font-size: 30px;
+    line-height: 1.4; /* Adjusted for better spacing */
+    font-size: 1.8rem;
     color: #718f74;
 }
 
 .background_image_phone {
-    background-image: url('../../assets/pink_blob4.svg');
+    /* background-image: url('../../assets/pink_blob4.svg'); */
     background-repeat: no-repeat;
     background-size: 101%;
     /* background-position: 0rem 20rem; */
@@ -93,6 +92,7 @@
     .infoBox_para {
         margin-left: 2rem;
         width: 100%;
+        font-size: 1.6rem
     }
 }
 
@@ -100,6 +100,9 @@
     .background_image {
         background-size: 100%;
         background-position: -10rem 15rem;
+    }
+    .infoBox_para {
+        font-size: 1.4rem;
     }
 }
 
@@ -121,9 +124,38 @@
 
 @media screen and (max-width: 1200px) {
     .infoBox_header {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .infoBox_header {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .infoBox_para_mobile {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .infoBox_header {
         width: 100%;
     }
+}
 
+@media screen and (max-width: 600px) {
+    .infoBox_para_mobile {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .infoBox_para_mobile {
+        font-size: 1rem;
+    }
 }
 
 

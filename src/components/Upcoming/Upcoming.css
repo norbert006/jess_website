@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .upcoming_header {
@@ -47,12 +47,12 @@
     text-align: center;
     margin: auto;
     margin-bottom: 2rem;
-    width: 100%;
+    width: 35%;
 }
 
 .upcoming_para {
     font-family: "Hammersmith One", sans-serif;
-    font-size: 30px;
+    font-size: 1.4rem;
     line-height: 1.4;
     /* Adjusted for better spacing */
     color: #718f74;
@@ -64,6 +64,7 @@
     flex-direction: row;
     max-width: 100%;
     position: relative;
+    margin-top: -3rem;
 }
 
 .upcoming_gallery_images_container {
@@ -82,10 +83,10 @@
 
 .upcoming_gallery_images_card {
     position: relative;
-    min-width: 930px;
     /* Increase the width */
-    height: 950px;
+    min-width: 30%;
     /* Increase the height */
+    height: 100%;
     margin-left: 2rem;
 }
 
@@ -135,9 +136,9 @@
 .upcoming_para_mobile {
     font-family: "Hammersmith One", sans-serif;
     letter-spacing: 0.04em;
-    line-height: 30px;
+    line-height: 1.4;
     /* Adjusted for better spacing */
-    font-size: 30px;
+    font-size: 1.8rem;
     color: #718f74;
 }
 
@@ -149,7 +150,7 @@
 .upcoming_chef_sign p:first-child {
     font-family: var(--font-base);
     font-weight: 400;
-    font-size: 32;
+    font-size: 1.8rem;
     line-height: 41px;
     letter-spacing: 0.04em;
     text-transform: capitalize;
@@ -207,9 +208,25 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .gallery-image {
         height: 450px;
+    }
+    .upcoming_header {
+        width: 40%;
+    }
+    .upcoming_para {
+        font-size: 1rem;
+    }
+    .upcoming_gallery_images_card {
+        min-width: 22%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .upcoming_header {
+        width: 60%;
     }
 }
 
@@ -238,6 +255,12 @@
 @media screen and (max-width: 890px) {
     .gallery-image {
         height: 350px;
+    }
+    .upcoming_header {
+        width: 100%;
+    }
+    .upcoming_para_mobile {
+        font-size: 1.4rem;
     }
 }
 
@@ -275,11 +298,17 @@
     .gallery-image {
         height: 250px;
     }
+    .upcoming_para_mobile {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 540px) {
     .gallery-image {
         height: 200px;
+    }
+    .upcoming_para_mobile {
+        font-size: 1rem;
     }
 }
 
@@ -289,6 +318,9 @@
     }
     .gallery-image {
         height: 360px;
+    }
+    .upcoming_para_mobile {
+        font-size: 1rem;
     }
 }
 
