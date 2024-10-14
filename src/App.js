@@ -20,9 +20,9 @@ const App = () => {
     <div>
       <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} upcomingEventsRef={upcomingEventsRef}/>
       <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
-      <Gallery aboutUsRef={aboutUsRef}/>
-      <InfoBox privateEventsRef={privateEventsRef}/>
       <Upcoming upcomingEventsRef={upcomingEventsRef}/>
+      <InfoBox privateEventsRef={privateEventsRef}/>
+      <Gallery aboutUsRef={aboutUsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
     </div>
