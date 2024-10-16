@@ -93,15 +93,15 @@ const Upcoming = ({ upcomingEventsRef }) => {
                             <div className="app__gallery-images" style={{ marginTop: '0rem' }}>
                                 <div className="app__gallery-images_container" ref={scrollRef}>
                                     {galleryImages.map((item, index) => (
-                                        <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
+                                        <div className="app__gallery-images_card_upcoming flex__center" key={`gallery_image-${index + 1}`}>
                                             <img src={item.image} alt="gallery" onClick={() => openWebsite(item.url)}  style={{ color: "var(--color-jess-green)" }}/>
                                             {/* <BsInstagram className="gallery__image-icon" onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} /> */}
                                         </div>
                                     ))}
                                 </div>
                                 <div className="app__gallery-images_arrows">
-                                    <BsArrowLeftShort transform="shrink-6" className="gallery__arrow-icon" onClick={() => scroll('left')} />
-                                    <BsArrowRightShort className="gallery__arrow-icon" onClick={() => scroll('right')} />
+                                    <BsArrowLeftShort transform="shrink-6" className="gallery__arrow-icon_upcoming" onClick={() => scroll('left')} />
+                                    <BsArrowRightShort className="gallery__arrow-icon_upcoming" onClick={() => scroll('right')} />
                                 </div>
                             </div>
                         </div>
