@@ -228,6 +228,10 @@
     .upcoming_header {
         width: 60%;
     }
+    .background_image_phone {
+        margin-bottom: -8rem;
+        margin-top: -6rem;
+    }
 }
 
 @media screen and (max-width: 1150px) {
