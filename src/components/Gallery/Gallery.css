@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     padding: 8rem 4rem;
-    /* background-image: url('../../assets/blue_blob_background3.svg'); */
+    background-image: url('../../assets/blue_blob_background3.svg');
     background-repeat: no-repeat;
-    background-position: -1.5rem 8rem;
+    background-position: -1.5rem -4rem;
     background-size: 100%;
     margin-bottom: -15rem;
 }
@@ -43,8 +43,7 @@
     font-family: "Hammersmith One", sans-serif;
     font-size: 1.8rem;
     line-height: 1.4; /* Adjusted for better spacing */
-    /* color: white; */
-    color: var(--color-jess-pink);
+    color: white;
     max-width: 32%;
     text-align: center;
     margin-left: 12rem;
@@ -52,48 +51,7 @@
 
 /* Responsive Design */
 
-@media screen and (max-width: 2250px) {
-    .about-us-container {
-        background-position: -1.5rem 6rem;
-        background-size: 105%;
-        margin-bottom: -5rem;
-        margin-top: -4rem;
-    }
-}
-
-@media screen and (max-width: 2185px) {
-    .about-us-container {
-        background-position: -1.5rem 6rem;
-        background-size: 110%;
-    }
-}
-
-@media screen and (max-width: 2085px) {
-    .about-us-container {
-        background-position: -8rem 6rem;
-        background-size: 115%;
-    }
-}
-
-@media screen and (max-width: 2045px) {
-    .about-us-container {
-        background-position: -8rem 6rem;
-        background-size: 120%;
-    }
-}
-
-@media screen and (max-width: 2045px) {
-    .about-us-container {
-        background-position: -8rem 6rem;
-        background-size: 130%;
-    }
-}
-
 @media screen and (max-width: 1900px) {
-    .about-us-container {
-        background-position: -12rem 6rem;
-        background-size: 140%;
-    }
     .about-us-logo img {
         width: 85%;
         margin-left: 10rem;
@@ -101,19 +59,15 @@
 }
 
 @media screen and (max-width: 1800px) {
-    .about-us-container {
-        background-position: -18rem 6rem;
-        background-size: 150%;
-    }
     .about_para {
         margin-top: 2rem;
+        margin-left: 6rem;
     }
 }
 
 @media screen and (max-width: 1700px) {
     .about-us-container {
-        background-position: -18rem 6rem;
-        background-size: 160%;
+        background-position: 0rem 4rem;
     }
     .about_para {
         margin-top: 8rem;
@@ -122,8 +76,9 @@
 
 @media screen and (max-width: 1615px) {
     .about-us-container {
-        background-position: -18rem 2rem;
-        background-size: 170%;
+        background-size: 110%;
+        background-position: 0rem 2rem;
+
     }
     .about_para {
         max-width: 44%;
@@ -139,8 +94,8 @@
 
 @media screen and (max-width: 1460px) {
     .about-us-container {
-        background-position: -24rem 2rem;
-        background-size: 180%;
+        background-position: -2rem 2rem;
+        background-size: 120%;
     }
     .about_para {
         max-width: 50%;
@@ -150,8 +105,8 @@
 
 @media screen and (max-width: 1340px) {
     .about-us-container {
-        background-position: -24rem 2rem;
-        background-size: 200%;
+        background-position: 0rem 4rem;
+        background-size: 110%;
     }
     .about_para {
         margin-top: 10rem;
@@ -161,8 +116,8 @@
 
 @media screen and (max-width: 1260px) {
     .about-us-container {
-        background-position: -24rem 0rem;
-        background-size: 200%;
+        background-position: 0rem 8rem;
+        background-size: 115%;
     }
     .about_para {
         margin-top: 10rem;
@@ -174,25 +129,16 @@
     }
 }
 
-@media screen and (max-width: 1170px) {
-    .about-us-container {
-        background-position: -24rem 0rem;
-        background-size: 210%;
-    }
-}
-
-
 @media screen and (max-width: 1135px) {
     .about-us-container {
-        background-position: -26rem -2rem;
-        background-size: 220%;
+        background-position: 0rem 11rem;
     }
 }
 
 @media screen and (max-width: 1045px) {
     .about-us-container {
-        background-position: -26rem 2rem;
-        background-size: 220%;
+        background-position: -2rem 12rem;
+        background-size: 125%;
     }
     .about_para {
         margin-right: 2rem;
@@ -202,8 +148,8 @@
 
 @media screen and (max-width: 1005px) {
     .about-us-container {
-        background-position: -30rem 2rem;
-        background-size: 240%;
+        background-position: -8rem 12rem;
+        background-size: 150%;
     }
     .about-us-logo img {
         width: 150%;
@@ -213,12 +159,14 @@
 
 @media screen and (max-width: 930px) {
     .about-us-container {
-        background-position: -34rem 2rem;
-        background-size: 260%;
+        background-image: none;
     }
     .about_para {
+        color: var(--color-jess-pink);
+        margin-top: 4rem;
         width: 140%;
         font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
     .about-us-logo {
         margin-left: -10rem;
@@ -318,7 +266,7 @@
         /* background-image: url('../../assets/mobile_blob_2.svg'); */
         background-size: cover;
         background-position: center 4rem;
-        /* padding-top: 2rem; */
+        padding-top: 0rem;
     }
 }
 

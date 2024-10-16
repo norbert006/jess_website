@@ -82,6 +82,12 @@
     background-color: var(--color-jess-pink);
 }
 
+@media screen and (max-width: 1700px) {
+    .contact {
+        margin-top: 6rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .contact {
         font-size: 14px;

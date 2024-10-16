@@ -210,7 +210,7 @@
 
 @media screen and (max-width: 1650px) {
     .upcoming_bg {
-        margin-top: -12rem;
+        margin-top: -2rem;
     }
 }
 
@@ -230,10 +230,6 @@
 @media screen and (max-width: 1200px) {
     .upcoming_header {
         width: 60%;
-    }
-    .background_image_phone {
-        margin-bottom: -8rem;
-        margin-top: -6rem;
     }
 }
 
@@ -320,14 +316,17 @@
 }
 
 @media (max-width: 480px) {
-    .gallery-container {
-        grid-template-columns: 1fr; /* Stack images in a single column on mobile */
-    }
+    /* .gallery-container {
+        grid-template-columns: 1fr;
+    } */
     .gallery-image {
         height: 360px;
     }
     .upcoming_para_mobile {
         font-size: 1rem;
+    }
+    .background_image_phone {
+        margin-top: -8rem;
     }
 }
 
@@ -340,6 +339,9 @@
 @media screen and (max-width: 340px) {
     .gallery-image {
         height: 250px;
+    }
+    .background_image_phone {
+        margin-top: -2rem;
     }
 }
 

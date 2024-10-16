@@ -84,7 +84,7 @@
 @media screen and (max-width: 1620px) {
     .background_image {
         background-size: 100%;
-        background-position: -10rem 10rem;
+        background-position: -10rem 0rem;
     }
     .infoBox_header {
         width: 120%;
@@ -96,31 +96,18 @@
     }
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1485px) {
     .background_image {
         background-size: 100%;
-        background-position: -10rem 15rem;
+        background-position: -10rem 5rem;
     }
+}
+
+@media screen and (max-width: 1350px) {
     .infoBox_para {
         font-size: 1.4rem;
     }
 }
-
-@media screen and (max-width: 1310px) {
-    .background_image {
-        background-size: 100%;
-        background-position: -10rem 15rem;
-    }
-
-}
-
-@media screen and (max-width: 1280px) {
-    .background_image {
-        background-size: 100%;
-        background-position: -10rem 25rem;
-    }
-}
-
 
 @media screen and (max-width: 1200px) {
     .infoBox_header {
