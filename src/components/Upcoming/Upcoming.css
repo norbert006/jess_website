@@ -372,7 +372,7 @@
 }
 
 .app__gallery-images_card_upcoming img {
-    border: solid var(--color-jess-blue) 0.1px; /* Using this so that the hover effect can "retract back" rather than disappearing. */
+    border: solid var(--color-jess-green) 0.1px; /* Using this so that the hover effect can "retract back" rather than disappearing. */
     width: 100%;
     height: 100%;
     object-fit: cover;
