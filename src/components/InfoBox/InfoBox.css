@@ -71,7 +71,7 @@
     letter-spacing: 0.04em;
     line-height: 1.4; /* Adjusted for better spacing */
     font-size: 1.8rem;
-    color: #718f74;
+    color: var(--color-jess-blue);
 }
 
 .background_image_phone {
