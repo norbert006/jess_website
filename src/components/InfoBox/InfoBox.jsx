@@ -25,9 +25,9 @@ const InfoBox = ({ privateEventsRef }) => {
         const { current } = scrollRef;
 
         if (direction === 'left') {
-            current.scrollLeft -= 300;
+            current.scrollLeft -= 275;
         } else {
-            current.scrollLeft += 300;
+            current.scrollLeft += 275;
         }
     }
     const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]

@@ -25,9 +25,9 @@ const Upcoming = ({ upcomingEventsRef }) => {
         const { current } = scrollRef;
 
         if (direction === 'left') {
-            current.scrollLeft -= 964;
+            current.scrollLeft -= 274;
         } else {
-            current.scrollLeft += 964;
+            current.scrollLeft += 274;
         }
     }
     const galleryImages = [
