@@ -208,15 +208,18 @@
 }
 
 
+@media screen and (max-width: 1650px) {
+    .upcoming_bg {
+        margin-top: -12rem;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .gallery-image {
         height: 450px;
     }
     .upcoming_header {
         width: 40%;
-    }
-    .upcoming_para {
-        font-size: 1rem;
     }
     .upcoming_gallery_images_card {
         min-width: 22%;
@@ -274,11 +277,11 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .gallery-container {
-        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
-}
+} */
 
 @media screen and (max-width: 740px) {
     .gallery-image {
