@@ -83,7 +83,7 @@ const Upcoming = ({ upcomingEventsRef }) => {
 
                         <div className='app__chef-content'>
                             <div className='app__chef-content-quote infoBoxMobile'>
-                                <p className='infoBox_para_mobile'>Upcoming Pottery Events: Get Creative with Clayful Hands!
+                                <p className='infoBox_para_mobile' style={{color: '#718f74'}}>Upcoming Pottery Events: Get Creative with Clayful Hands!
                                 Discover our latest workshops and experiences—perfect for all skill levels & abilities!
                                 </p>
                             </div>

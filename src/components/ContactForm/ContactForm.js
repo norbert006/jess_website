@@ -115,7 +115,7 @@ const ContactForm = ({ contactUsRef }) => {
                 <br />
                 <br></br>
 
-                <h2>Reach out today, and we'll get back to you very soon!</h2>
+                <h2>Reach out today, and we'll get back to you very soon</h2>
             </div>
         </section>
     );
