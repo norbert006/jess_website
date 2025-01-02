@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import clayfulhands_logo from '../../assets/clayfulhands_logo_transparent.png'
+import { FiFacebook, FiInstagram } from 'react-icons/fi'
 import './Navbar.css';
 
 const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcomingEventsRef }) => {
@@ -31,6 +32,10 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcom
         }
     };
 
+    const openWebsite = (url) => {
+        window.open(url, "_blank", "noreferrer");
+    };
+
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
@@ -41,6 +46,12 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcom
                 <li className="p__opensans"><a href="#private_events" onClick={() => handleScroll(privateEventsRef)}>PRIVATE EVENTS</a></li>
                 <li className="p__opensans"><a href="#about_us" onClick={() => handleScroll(aboutUsRef)}>ABOUT US</a></li>
                 <li className="p__opensans"><a href="#contact_us" onClick={() => handleScroll(contactUsRef)}>CONTACT US</a></li>
+                <li>
+                    <FiFacebook style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.facebook.com/clayfulhands/")} />
+                </li>
+                <li>
+                    <FiInstagram style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                </li>
             </ul>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu className="app__navbar-smallscreen-closebutton" color="#000000" fontSize={27} onClick={() => setToggleMenu(true)} />
@@ -53,6 +64,10 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcom
                             <li className="p__opensans"><a href="#about_us" onClick={() => handleScrollMobile(aboutUsRef)}>ABOUT US</a></li>
                             <li className="p__opensans"><a href="#private_events" onClick={() => handleScrollMobile(privateEventsRef)}>PRIVATE EVENTS</a></li>
                             <li className="p__opensans"><a href="#contact_us" onClick={() => handleScrollMobile(contactUsRef)}>CONTACT US</a></li>
+                            <li>
+                                <FiFacebook style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.facebook.com/clayfulhands/")} />
+                                <FiInstagram style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
+                            </li>
                         </ul>
                     </div>
                 )}
