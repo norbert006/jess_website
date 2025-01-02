@@ -50,6 +50,16 @@
     width: 100%;
 }
 
+.enquire_button {
+    padding: 10px 20px; /* Add padding inside the header */
+    display: inline-block; /* Ensure the background color doesn't span the full width */
+    text-align:center;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 70%;
+    cursor: pointer;
+}
+
 .infoBox_para {
     font-family: "Hammersmith One", sans-serif;
     font-size: 1.8rem;
@@ -89,6 +99,9 @@
     .infoBox_header {
         width: 120%;
     }
+    .enquire_button {
+        width: 90%;
+    }
     .infoBox_para {
         margin-left: 2rem;
         width: 100%;
@@ -113,11 +126,17 @@
     .infoBox_header {
         width: 60%;
     }
+    .enquire_button {
+        width: 30%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     .infoBox_header {
         width: 80%;
+    }
+    .enquire_button {
+        width: 50%;
     }
 }
 
@@ -130,6 +149,9 @@
 @media screen and (max-width: 700px) {
     .infoBox_header {
         width: 100%;
+    }
+    .enquire_button {
+        width: 70%;
     }
 }
 

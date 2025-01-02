@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Images from '../../assets/Images';
-import upcoming_header from '../../assets/button1.svg'
+import upcoming_header from '../../assets/whats_on_button.svg'
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
 import './Upcoming.css'
@@ -32,39 +32,34 @@ const Upcoming = ({ upcomingEventsRef }) => {
     }
     const galleryImages = [
         {
-            image: Images.pottery_lounge,
+            image: Images.event1,
+            title: "Pottery Painting",
+            url: "https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+        },
+        {
+            image: Images.event2,
+            title: "Clay Clubs",
+            url: " https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+        },
+        {
+            image: Images.event3,
+            title: "Courses",
+            url: "https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+        },
+        {
+            image: Images.event4,
             title: "The Pottery Lounge",
-            name: "Evening Pottery Painting and Throwing",
-            price: "£???",
-            url: "https://www.eventbrite.co.uk/e/the-pottery-lounge-hove-tickets-986713525717?aff=oddtdtcreator"
+            url: "https://www.eventbrite.co.uk/cc/the-pottery-lounge-3571249"
         },
         {
-            image: Images.four_week_pottery,
-            title: "4 Week Pottery Course",
-            name: "Pottery Throwing",
-            price: "£???",
-            url: "https://www.eventbrite.co.uk/e/4-week-inclusive-pottery-course-with-a-christmas-theme-tickets-1008506980527?aff=ebdsoporgprofile&_gl=1*1a5y99b*_up*MQ..*_ga*MTE5Mzc4ODM1LjE3Mjg0MTg0MTM.*_ga_TQVES5V6SH*MTcyODQxODQxMi4xLjAuMTcyODQxODQxMi4wLjAuMA.."
+            image: Images.event5,
+            title: "Throwing",
+            url: " https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
         },
         {
-            image: Images.clay_club_halloween,
-            title: "Halloween Pottery Pop-Up for Kids",
-            name: "Unique Canvas",
-            price: "£???",
-            url: "https://www.eventbrite.co.uk/e/halloween-pottery-pop-up-for-kids-tickets-1003141291607?aff=ebdsoporgprofile&_gl=1*1x0ute2*_up*MQ..*_ga*NDEwMDE1ODU3LjE3Mjg0MTgzMTc.*_ga_TQVES5V6SH*MTcyODQxODMxNi4xLjAuMTcyODQxODMxNi4wLjAuMA.."
-        },
-        {
-            image: Images.october_pottery_lounge,
-            title: "The Pottery Lounge - October Special",
-            name: "Evening Pottery Painting and Throwing",
-            price: "£???",
-            url: "https://www.eventbrite.co.uk/o/clayful-hands-84035095573?_gl=1*1w3a1tw*_up*MQ..*_ga*NDEwMDE1ODU3LjE3Mjg0MTgzMTc.*_ga_TQVES5V6SH*MTcyODQxODMxNi4xLjEuMTcyODQxODM4Ni4wLjAuMA.."
-        },
-        {
-            image: Images.november_pottery_lounge,
-            title: "The Pottery Lounge - November Special",
-            name: "Evening Pottery Painting and Throwing",
-            price: "£???",
-            url: "https://www.eventbrite.co.uk/o/clayful-hands-84035095573?_gl=1*1w3a1tw*_up*MQ..*_ga*NDEwMDE1ODU3LjE3Mjg0MTgzMTc.*_ga_TQVES5V6SH*MTcyODQxODMxNi4xLjEuMTcyODQxODM4Ni4wLjAuMA.."
+            image: Images.event6,
+            title: "Workshops",
+            url: " https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
         }
     ]
 

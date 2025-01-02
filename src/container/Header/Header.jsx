@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react'
 import header_photo from '../../assets/header_photo.JPG'
 import sub_header_finger from '../../assets/sub_header_finger.JPG';
 import sub_header_hen from '../../assets/sub_header_hen.JPG';
+import new_kids_club from '../../assets/new_kids_club.jpg';
 import sub_header_family from '../../assets/sub_header_family.JPG';
 import button1 from "../../assets/button1.svg";
 import button2 from "../../assets/button2.svg";
 import button3 from "../../assets/button3.svg";
+import whats_on_button from "../../assets/whats_on_button.svg";
 import book_now_button from "../../assets/book_now_button.svg";
 import mobile_header_cover from "../../assets/mobile_header_cover2.svg"
 import Images from "../../assets/Images";
@@ -51,7 +53,7 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
 
     }
     // const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
-    const galleryImages = [sub_header_family, sub_header_finger, sub_header_hen]
+    const galleryImages = [sub_header_hen, new_kids_club, sub_header_finger]
 
     const openWebsite = (url) => {
         window.open(url, "_blank", "noreferrer");
@@ -99,14 +101,14 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
                     <img src={header_photo} alt="Header_image" className='mainImage' />
                 </div>
                 <div className='buttonsContainer'>
-                    <img src={button1} alt="button" className='button' href="#upcoming" onClick={() => handleScroll(upcomingEventsRef)}/>
+                    <img src={whats_on_button} alt="button" className='button' href="#upcoming" onClick={() => handleScroll(upcomingEventsRef)}/>
                     <img src={button2} alt="button" className='button' href="#private_events" onClick={() => handleScroll(privateEventsRef)} />
-                    <img src={button3} alt="button" className='button' />
+                    <img src={button3} alt="button" className='button' onClick={() => openWebsite("https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000")}/>
                 </div>
                 <div className='thumbnailsContainer'>
                     <img src={sub_header_finger} alt="Subheader_image" className='thumbnail' />
                     <img src={sub_header_hen} alt="Subheader_image" className='thumbnail' />
-                    <img src={sub_header_family} alt="Subheader_image" className='thumbnail' />
+                    <img src={new_kids_club} alt="Subheader_image" className='thumbnail' />
                 </div>
             </header>
         )

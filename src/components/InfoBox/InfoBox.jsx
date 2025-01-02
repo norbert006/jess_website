@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Images from '../../assets/Images';
 import private_events_header from '../../assets/button2.svg'
+import enquire_button from '../../assets/enquire_button.svg'
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
 import './InfoBox.css'
 
-const InfoBox = ({ privateEventsRef }) => {
+const InfoBox = ({ privateEventsRef, contactUsRef }) => {
+    const [toggleMenu, setToggleMenu] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
 
     function handleWindowSizeChange() {
@@ -36,6 +38,20 @@ const InfoBox = ({ privateEventsRef }) => {
         window.open(url, "_blank", "noreferrer");
     };
 
+    const handleScroll = (ref) => {
+        console.log(ref);
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleScrollMobile = (ref) => {
+        console.log(ref);
+        if (ref && ref.current) {
+            setToggleMenu(false)
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     if (isMobile) {
         return (
@@ -55,6 +71,7 @@ const InfoBox = ({ privateEventsRef }) => {
                                 </p>
                             </div>
                             <p className='infoBox_para_mobile infoBoxMobile'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
+                            <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScrollMobile(contactUsRef)}/>
                         </div>
 
                         <div className='app__chef-sign'>
@@ -106,6 +123,7 @@ const InfoBox = ({ privateEventsRef }) => {
                                     including the chance to try your hand at the potter's wheel.
                         </p>
                         <p className='infoBox_para'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
+                        <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScroll(contactUsRef)}/>
                     </div>
                 </div>
             </div>

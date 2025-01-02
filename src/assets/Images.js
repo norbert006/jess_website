@@ -11,8 +11,13 @@ const Images = {
     four_week_pottery : require('./4_week_pottery.jpg'),
     clay_club_halloween : require('./clay_club_halloween.jpg'),
     october_pottery_lounge : require('./october_pottery_lounge.jpg'),
-    november_pottery_lounge : require('./november_pottery_lounge.jpg')
-
+    november_pottery_lounge : require('./november_pottery_lounge.jpg'),
+    event1 : require('./event1.jpg'),
+    event2 : require('./event2.jpg'),
+    event3 : require('./event3.jpg'),
+    event4 : require('./event4.jpg'),
+    event5 : require('./event5.jpg'),
+    event6 : require('./event6.jpg')
 }
 
 export default Images;

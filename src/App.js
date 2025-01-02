@@ -21,7 +21,7 @@ const App = () => {
       <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} upcomingEventsRef={upcomingEventsRef}/>
       <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
       <Upcoming upcomingEventsRef={upcomingEventsRef}/>
-      <InfoBox privateEventsRef={privateEventsRef}/>
+      <InfoBox privateEventsRef={privateEventsRef} contactUsRef={contactUsRef}/>
       <Gallery aboutUsRef={aboutUsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
