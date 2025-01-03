@@ -153,7 +153,7 @@
     }
     .about-us-logo img {
         width: 150%;
-        margin-left: -3rem;
+        /* margin-left: -3rem; */
     }
 }
 
@@ -168,12 +168,9 @@
         font-size: 1.8rem;
         margin-bottom: 2rem;
     }
-    .about-us-logo {
-        margin-left: -10rem;
-    }
     .about-us-logo img {
         width: 100%;
-        margin-left: 6rem;
+        /* margin-left: 6rem; */
     }
 }
 
@@ -183,9 +180,9 @@
         background-size: 280%;
     }
     .about-us-logo img {
-        width: 80%;
+        width: 100%;
         margin-top: 10rem;
-        margin-left: 6rem;
+        /* margin-left: 6rem; */
     }
     .about_para {
         font-size: 1.4rem;
@@ -210,7 +207,7 @@
     .about-us-logo {
         /* max-width: 50%; */
         padding: 2rem;
-        margin-left: -4rem;
+        /* margin-left: -4rem; */
         margin-top: -10rem;
     }
     .about-us-container {
@@ -229,9 +226,6 @@
     .about-us-container {
         background-position: -28rem -2rem;
         background-size: 340%;
-    }
-    .about-us-logo {
-        margin-left: -6rem;
     }
 }
 
@@ -253,14 +247,11 @@
         font-size: 3.8rem;
     }
     .about-us-logo {
-        margin-left: 4rem;
-        max-width: 65%;
+        /* margin-left: 4rem; */
+        max-width: 100%;
     }
     .about_para {
         max-width: 100%;
-    }
-    .about-us-logo {
-        margin-left: -4rem;
     }
     .about-us-container {
         /* background-image: url('../../assets/mobile_blob_2.svg'); */
@@ -271,17 +262,15 @@
 }
 
 @media screen and (max-width: 600px) {
-    .about-us-logo {
-        margin-left: -6rem;
-    }
     .about_para {
         font-size: 1.2rem;
+        margin-bottom: 0rem;
     }
 }
 
 @media screen and (max-width: 550px) {
     .about-us-logo {
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 
@@ -291,10 +280,7 @@
         letter-spacing: 0.3rem;
     }
     .about-us-logo img{
-        width: 110%;
-    }
-    .about-us-logo {
-        margin-left: -10rem;
+        width: 100%;
     }
     .about_para {
         font-size: 1rem;
@@ -304,9 +290,6 @@
 @media screen and (max-width: 430px) {
     .about-us-title {
         font-size: 2.6rem;
-    }
-    .about-us-logo {
-        margin-left: -12rem;
     }
 }
 

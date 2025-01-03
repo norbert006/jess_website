@@ -1,7 +1,7 @@
 import React, { useEffect }from "react";
 import './Gallery.css';
 import '../InfoBox/InfoBox.css'
-import clayfulhands_logo_transparent2 from '../../assets/clayfulhands_logo_transparent2.svg'
+import about_us_photo from '../../assets/about_us_photo.png'
 
 const Gallery = ({ aboutUsRef }) => {
     console.log("width = ", window.innerWidth)
@@ -19,7 +19,7 @@ const Gallery = ({ aboutUsRef }) => {
 
                 </div>
                 <div className="about-us-logo">
-                    <img src={clayfulhands_logo_transparent2} alt="Clayful Hands Logo" />
+                    <img src={about_us_photo} alt="Clayful Hands Logo" />
                 </div>
             </div>
         </div>

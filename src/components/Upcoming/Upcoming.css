@@ -403,7 +403,7 @@
 
 @media screen and (max-width: 650px) {
     .app__gallery-images_card_upcoming {
-        min-width: 240px;
+        min-width: 300px;
         height: 300px;
     }
 

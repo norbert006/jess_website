@@ -9,6 +9,7 @@ import button1 from "../../assets/button1.svg";
 import button2 from "../../assets/button2.svg";
 import button3 from "../../assets/button3.svg";
 import whats_on_button from "../../assets/whats_on_button.svg";
+import whats_on2 from "../../assets/whats_on2.svg";
 import book_now_button from "../../assets/book_now_button.svg";
 import mobile_header_cover from "../../assets/mobile_header_cover2.svg"
 import Images from "../../assets/Images";
@@ -63,7 +64,7 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             scroll('right');
-        }, 3000); // Adjust the interval time as needed (e.g., 3000ms for 3 seconds)
+        }, 5000); // Adjust the interval time as needed (e.g., 3000ms for 3 seconds)
 
         return () => clearInterval(interval);
     }, [width]);
@@ -88,7 +89,7 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
                             </div>
                         ))}
                         <img src={mobile_header_cover} alt="Overlay" className="overlay_image" />
-                        <img src={book_now_button} className="overlay_button" onClick={() => openWebsite("https://www.eventbrite.co.uk/o/clayful-hands-84035095573")} alt="button" />
+                        <img src={whats_on2} className="overlay_button" onClick={() => handleScroll(upcomingEventsRef)} alt="button" />
                     </div>
                 </div>
             </div>

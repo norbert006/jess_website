@@ -17,7 +17,15 @@ const Images = {
     event3 : require('./event3.jpg'),
     event4 : require('./event4.jpg'),
     event5 : require('./event5.jpg'),
-    event6 : require('./event6.jpg')
+    event6 : require('./event6.jpg'),
+    private_events1 : require('./private_events1.JPG'),
+    private_events2 : require('./private_events2.JPG'),
+    private_events3 : require('./private_events3.JPG'),
+    private_events4 : require('./private_events4.JPG'),
+    private_events5 : require('./private_events5.JPG'),
+    private_events6 : require('./private_events6.JPG'),
+    private_events7 : require('./private_events7.JPG'),
+    private_events8 : require('./private_events8.JPG')
 }
 
 export default Images;

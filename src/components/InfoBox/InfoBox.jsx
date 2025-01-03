@@ -32,7 +32,12 @@ const InfoBox = ({ privateEventsRef, contactUsRef }) => {
             current.scrollLeft += 275;
         }
     }
-    const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
+    const galleryImages = [
+        Images.private_events1, Images.private_events5, Images.private_events4,
+        Images.private_events2, Images.private_events3, Images.private_events6,
+        Images.private_events7, Images.private_events8, Images.hen_image1, 
+        Images.eve_image1, Images.sub_header_finger
+    ]
 
     const openWebsite = (url) => {
         window.open(url, "_blank", "noreferrer");
