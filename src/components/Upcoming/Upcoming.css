@@ -406,6 +406,9 @@
         min-width: 300px;
         height: 300px;
     }
+    .app__wrapper_info {
+        margin-top: 4rem;
+    }
 
     .app__gallery-images_card_upcoming img {
         width: 100%;
