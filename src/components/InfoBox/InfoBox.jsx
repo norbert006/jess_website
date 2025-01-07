@@ -68,12 +68,19 @@ const InfoBox = ({ privateEventsRef, contactUsRef }) => {
 
                         <div className='app__chef-content'>
                             <div className='app__chef-content-quote infoBoxMobile'>
-                                <p className='infoBox_para_mobile'>Host Your Own Pottery Party with Clayful Hands!
-
-                                    Celebrate in a fun and creative way—choose your activity: hand-building, pottery painting, & the potter's wheel. You can even select a combination of these. Whether you're new to clay or looking for something new, we’ll tailor the experience to make it truly memorable for you.
-                                    Perfect for any occasion—hen dos, team-building sessions, or festive parties! We can bring the fun to the comfort of your home or host the event at a local venue near you.
-
-                                    Let’s plan an unforgettable celebration—get in touch for pricing and availability today!
+                                <p className='infoBox_para_mobile'>
+                                    <h3>Book an event with Clayful Hands</h3>
+                                    Looking for a fun and creative way to celebrate? Whether it’s a birthday, hen do, team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences to make your event truly memorable.
+                                    <br></br>
+                                    <br></br>
+                                    Choose from a variety of techniques, including:
+                                    <li>Hand-building</li>
+                                    <li>Pottery painting</li>
+                                    <li>Throwing on the potter's wheel</li>
+                                    <li>A combination of hand-building or pottery painting with throwing</li>
+                                    <br></br>
+                                    Private parties start from £200. We can host your event at a local venue, or bring the creativity to the comfort of your own home!
+                                    For more information on pricing, party packages and availability, get in touch today and let’s plan a special celebration together!
                                 </p>
                             </div>
                             {/* <p className='infoBox_para_mobile infoBoxMobile'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p> */}
@@ -122,14 +129,20 @@ const InfoBox = ({ privateEventsRef, contactUsRef }) => {
 
                     <div className='app__wrapper_info infoBox' style={{ marginLeft: '5rem' }}>
                         <img src={private_events_header} alt="heading_text" className='infoBox_header' />
-                        <p className='infoBox_para'>Host Your Own Pottery Party with Clayful Hands!
-
-                            Celebrate in a fun and creative way—choose your activity: hand-building, pottery painting, & the potter's wheel. You can even select a combination of these. Whether you're new to clay or looking for something new, we’ll tailor the experience to make it truly memorable for you.
-                            Perfect for any occasion—hen dos, team-building sessions, or festive parties! We can bring the fun to the comfort of your home or host the event at a local venue near you.
-
-                            Let’s plan an unforgettable celebration—get in touch for pricing and availability today!
+                        <p className='infoBox_para'>
+                            <h3>Book an event with Clayful Hands</h3>
+                            Looking for a fun and creative way to celebrate? Whether it’s a birthday, hen do, team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences to make your event truly memorable.
+                            <br></br>
+                            <br></br>
+                            Choose from a variety of techniques, including:
+                            <li>Hand-building</li>
+                            <li>Pottery painting</li>
+                            <li>Throwing on the potter's wheel</li>
+                            <li>A combination of hand-building or pottery painting with throwing</li>
+                            <br></br>
+                            Private parties start from £200. We can host your event at a local venue, or bring the creativity to the comfort of your own home!
+                            For more information on pricing, party packages and availability, get in touch today and let’s plan a special celebration together!
                         </p>
-                        {/* <p className='infoBox_para'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p> */}
                         <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScroll(contactUsRef)} />
                     </div>
                 </div>

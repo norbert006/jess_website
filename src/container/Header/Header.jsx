@@ -89,7 +89,7 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
                             </div>
                         ))}
                         <img src={mobile_header_cover} alt="Overlay" className="overlay_image" />
-                        <img src={whats_on2} className="overlay_button" onClick={() => handleScroll(upcomingEventsRef)} alt="button" />
+                        {/* <img src={whats_on2} className="overlay_button" onClick={() => handleScroll(upcomingEventsRef)} alt="button" /> */}
                     </div>
                 </div>
             </div>
