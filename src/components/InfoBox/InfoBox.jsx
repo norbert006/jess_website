@@ -35,7 +35,7 @@ const InfoBox = ({ privateEventsRef, contactUsRef }) => {
     const galleryImages = [
         Images.private_events1, Images.private_events5, Images.private_events4,
         Images.private_events2, Images.private_events3, Images.private_events6,
-        Images.private_events7, Images.private_events8, Images.hen_image1, 
+        Images.private_events7, Images.private_events8, Images.hen_image1,
         Images.eve_image1, Images.sub_header_finger
     ]
 
@@ -68,15 +68,16 @@ const InfoBox = ({ privateEventsRef, contactUsRef }) => {
 
                         <div className='app__chef-content'>
                             <div className='app__chef-content-quote infoBoxMobile'>
-                                <p className='infoBox_para_mobile'>Book a Private Event with Clayful Hands
-                                    Looking for a unique and creative way to celebrate? Whether it's a hen or stag do, 
-                                    team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences 
-                                    just for you. Choose from hand-building, pottery painting, or even a combination of both, 
-                                    including the chance to try your hand at the potter's wheel.
+                                <p className='infoBox_para_mobile'>Host Your Own Pottery Party with Clayful Hands!
+
+                                    Celebrate in a fun and creative way—choose your activity: hand-building, pottery painting, & the potter's wheel. You can even select a combination of these. Whether you're new to clay or looking for something new, we’ll tailor the experience to make it truly memorable for you.
+                                    Perfect for any occasion—hen dos, team-building sessions, or festive parties! We can bring the fun to the comfort of your home or host the event at a local venue near you.
+
+                                    Let’s plan an unforgettable celebration—get in touch for pricing and availability today!
                                 </p>
                             </div>
-                            <p className='infoBox_para_mobile infoBoxMobile'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
-                            <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScrollMobile(contactUsRef)}/>
+                            {/* <p className='infoBox_para_mobile infoBoxMobile'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p> */}
+                            <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScrollMobile(contactUsRef)} />
                         </div>
 
                         <div className='app__chef-sign'>
@@ -121,14 +122,15 @@ const InfoBox = ({ privateEventsRef, contactUsRef }) => {
 
                     <div className='app__wrapper_info infoBox' style={{ marginLeft: '5rem' }}>
                         <img src={private_events_header} alt="heading_text" className='infoBox_header' />
-                        <p className='infoBox_para'>Book a Private Event with Clayful Hands
-                                    Looking for a unique and creative way to celebrate? Whether it's a hen or stag do, 
-                                    team-building session, or Christmas party, Clayful Hands offers tailored pottery experiences 
-                                    just for you. Choose from hand-building, pottery painting, or even a combination of both, 
-                                    including the chance to try your hand at the potter's wheel.
+                        <p className='infoBox_para'>Host Your Own Pottery Party with Clayful Hands!
+
+                            Celebrate in a fun and creative way—choose your activity: hand-building, pottery painting, & the potter's wheel. You can even select a combination of these. Whether you're new to clay or looking for something new, we’ll tailor the experience to make it truly memorable for you.
+                            Perfect for any occasion—hen dos, team-building sessions, or festive parties! We can bring the fun to the comfort of your home or host the event at a local venue near you.
+
+                            Let’s plan an unforgettable celebration—get in touch for pricing and availability today!
                         </p>
-                        <p className='infoBox_para'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p>
-                        <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScroll(contactUsRef)}/>
+                        {/* <p className='infoBox_para'>For more information on pricing and availability, get in touch with us today and let's plan an unforgettable event!</p> */}
+                        <img src={enquire_button} alt="heading_text" className='enquire_button' onClick={() => handleScroll(contactUsRef)} />
                     </div>
                 </div>
             </div>

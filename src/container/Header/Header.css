@@ -175,6 +175,9 @@
     .imageContainer {
       height: 250px;
     }
+    .header {
+      margin-bottom: -20rem;
+    }
     /* .button {
       padding: 10px 15px;
       font-size: 14px;
@@ -184,6 +187,9 @@
   @media screen and (max-width: 850px) {
     .imageContainer {
       height: 200px;
+    }
+    .header {
+      margin-bottom: -10rem;
     }
     /* .button {
       padding: 8px 12px;
@@ -227,5 +233,23 @@
       width: 100px;
       height: 85px;
     }
+    .top_container {
+      margin-bottom: 0rem;
+    }
   }
+
+  @media screen and (max-width: 425px) {
+    .top_container {
+      margin-bottom: 2rem;
+    }
+  }
+
+
+  @media screen and (max-width: 375px) {
+    .top_container {
+      margin-bottom: 6rem;
+    }
+  }
+
+
   

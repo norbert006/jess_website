@@ -137,29 +137,8 @@
 
 @media screen and (max-width: 1045px) {
     .about-us-container {
-        background-position: -2rem 12rem;
-        background-size: 125%;
-    }
-    .about_para {
-        margin-right: 2rem;
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 1005px) {
-    .about-us-container {
-        background-position: -8rem 12rem;
-        background-size: 150%;
-    }
-    .about-us-logo img {
-        width: 150%;
-        /* margin-left: -3rem; */
-    }
-}
-
-@media screen and (max-width: 930px) {
-    .about-us-container {
         background-image: none;
+        margin-top: -10rem;
     }
     .about_para {
         color: var(--color-jess-pink);
@@ -167,10 +146,21 @@
         width: 140%;
         font-size: 1.8rem;
         margin-bottom: 2rem;
+        align-items: center;
+        text-align: center;
+        /* margin: 0; */
+        padding: 0;
     }
     .about-us-logo img {
         width: 100%;
         /* margin-left: 6rem; */
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .about_para {
+        margin: 0;
     }
 }
 
@@ -216,7 +206,7 @@
         margin-bottom: -12rem;
     }
     .about_para {
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
         margin-top: 4rem;
         max-width: 100%;
     }
@@ -265,6 +255,9 @@
     .about_para {
         font-size: 1.2rem;
         margin-bottom: 0rem;
+    }
+    .about-us-container {
+        padding-top: 5rem;
     }
 }
 
