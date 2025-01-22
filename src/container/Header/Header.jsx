@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import header_photo from '../../assets/header_photo.JPG'
-import sub_header_finger from '../../assets/sub_header_finger.JPG';
-import sub_header_hen from '../../assets/sub_header_hen.JPG';
+import header_photo from '../../assets/header_photo.webp'
+import sub_header_finger from '../../assets/sub_header_finger.webp';
+import sub_header_hen from '../../assets/sub_header_hen.webp';
 import new_kids_club from '../../assets/new_kids_club.jpg';
-import sub_header_family from '../../assets/sub_header_family.JPG';
-import button1 from "../../assets/button1.svg";
 import button2 from "../../assets/button2.svg";
 import button3 from "../../assets/button3.svg";
 import whats_on_button from "../../assets/whats_on_button.svg";
-import whats_on2 from "../../assets/whats_on2.svg";
-import book_now_button from "../../assets/book_now_button.svg";
 import mobile_header_cover from "../../assets/mobile_header_cover2.svg"
-import Images from "../../assets/Images";
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
 import './Header.css'
@@ -53,7 +48,6 @@ const Header = ({ logoHomeRef, privateEventsRef, upcomingEventsRef }) => {
         }
 
     }
-    // const galleryImages = [Images.hen_image1, Images.eve_image1, Images.sub_header_finger]
     const galleryImages = [sub_header_hen, new_kids_club, sub_header_finger]
 
     const openWebsite = (url) => {

@@ -1,7 +1,7 @@
 import React, { useEffect }from "react";
 import './Gallery.css';
 import '../InfoBox/InfoBox.css'
-import about_us_photo from '../../assets/about_us_photo.png'
+import about_us_photo from '../../assets/about_us_photo.webp'
 
 const Gallery = ({ aboutUsRef }) => {
     console.log("width = ", window.innerWidth)

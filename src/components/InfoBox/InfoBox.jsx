@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Images from '../../assets/Images';
 import private_events_header from '../../assets/button2.svg'
-import enquire_button from '../../assets/enquire_button.svg'
+import enquire_button from '../../assets/enquire_button.webp'
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
 import './InfoBox.css'

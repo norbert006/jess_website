@@ -1,5 +1,5 @@
 import React from "react";
-import clayfulhands_logo_white from '../../assets/ClayfulWhite.png'
+import clayfulhands_logo_white from '../../assets/ClayfulWhite.webp'
 import { FiFacebook, FiInstagram } from 'react-icons/fi'
 import './Footer.css'
 

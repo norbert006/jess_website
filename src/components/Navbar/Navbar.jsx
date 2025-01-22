@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import clayfulhands_logo from '../../assets/clayfulhands_logo_transparent.png'
+import clayfulhands_logo from '../../assets/clayfulhands_logo_transparent.webp'
 import { FiFacebook, FiInstagram } from 'react-icons/fi'
 import './Navbar.css';
 
