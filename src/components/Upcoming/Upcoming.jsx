@@ -34,17 +34,17 @@ const Upcoming = ({ upcomingEventsRef }) => {
         {
             image: Images.event1,
             title: "Pottery Painting",
-            url: "https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+            url: "https://bookwhen.com/clayfulhands"
         },
         {
             image: Images.event2,
             title: "Clay Clubs",
-            url: " https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+            url: "https://bookwhen.com/clayfulhands"
         },
         {
             image: Images.event3,
             title: "Courses",
-            url: "https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+            url: "https://bookwhen.com/clayfulhands"
         },
         {
             image: Images.event4,
@@ -54,12 +54,12 @@ const Upcoming = ({ upcomingEventsRef }) => {
         {
             image: Images.event5,
             title: "Throwing",
-            url: " https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+            url: "https://bookwhen.com/clayfulhands"
         },
         {
             image: Images.event6,
             title: "Workshops",
-            url: " https://bookwhen.com/clayfulhands#focus=ev-s767-20250201100000"
+            url: "https://bookwhen.com/clayfulhands"
         }
     ]
 
