@@ -1,0 +1,55 @@
+.navbar {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  
+    .header-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .navbar-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+  
+      .logo {
+        width: 120px;
+        height: auto;
+      }
+  
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+  
+        .contact-button {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: bold;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+  
+        .social-icon {
+            font-size: 1.5rem;
+            color: white;
+            transition: transform 0.2s;
+          
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+          
+      }
+    }
+  }
+  
