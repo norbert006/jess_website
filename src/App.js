@@ -7,6 +7,7 @@ import Gallery from './components/Gallery/Gallery';
 import Footer from './components/Footer/Footer';
 import InfoBox from './components/InfoBox/InfoBox';
 import Upcoming from './components/Upcoming/Upcoming';
+import NewHeader from './components/Header/Header';
 
 import './App.css'
 
@@ -19,7 +20,7 @@ const App = () => {
   return (
     <div>
       <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} upcomingEventsRef={upcomingEventsRef}/>
-      <Header logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
+      <NewHeader logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
       <Upcoming upcomingEventsRef={upcomingEventsRef}/>
       <InfoBox privateEventsRef={privateEventsRef} contactUsRef={contactUsRef}/>
       <Gallery aboutUsRef={aboutUsRef}/>

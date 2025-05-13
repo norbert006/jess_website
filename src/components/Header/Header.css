@@ -1,0 +1,55 @@
+/* PotteryActivities.css */
+
+/* Container for all activity cards - grid layout with 3 columns on larger screens */
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Individual activity card - vertically stacks label and image */
+.activity-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for activity images - responsive width with rounded corners */
+.activity-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* New style for label images */
+.activity-label-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+
+    /* Stack all activity cards vertically */
+    .activities-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reverse order so label appears above image */
+    .activity-card {
+        flex-direction: column-reverse;
+    }
+
+    .activity-image {
+        margin-top: 0rem;
+    }
+
+    /* Adjust spacing when label is above image */
+    .activity-label {
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+}
