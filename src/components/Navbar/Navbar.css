@@ -10,7 +10,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
-    /* position: sticky; */
     top: 0;
     z-index: 5;
     position: relative;
@@ -46,12 +45,12 @@
     cursor: pointer;
     font-family: "Hammersmith One", sans-serif;
     font-size: 25px;
-    color: var(--color-jess-pink);
+    color: #fefefe;
 }
 
 /* Navigation links hover effect. */
 .app__navbar-links li:hover {
-    color: var(--color-jess-blue);
+    color: var(--color-jess-pink);
 }
 
 /* Styling for the "inquiries" button including transition for the underline. */
