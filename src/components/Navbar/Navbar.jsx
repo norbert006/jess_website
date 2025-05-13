@@ -18,7 +18,6 @@ const Navbar = ({ aboutUsRef, privateEventsRef, logoHomeRef, contactUsRef, upcom
     }, [toggleMenu]);
 
     const handleScroll = (ref) => {
-        console.log(ref);
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
         }

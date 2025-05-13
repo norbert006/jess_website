@@ -1,7 +1,11 @@
 /* Navbar positioning. */
 .app__navbar {
-    background-color: #f8f7f6;
+    background-image: url('../../assets/new_background.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
+    height: 20rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,13 +13,15 @@
     /* position: sticky; */
     top: 0;
     z-index: 5;
+    position: relative;
 }
 
 /* Navbar logo positioning. */
 .app__navbar-logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    height: 3rem;
 }
 
 /* Navbar logo size. */
@@ -25,7 +31,9 @@
 
 /* Navigation links positioning. */
 .app__navbar-links {
-    flex: 1;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -38,7 +46,7 @@
     cursor: pointer;
     font-family: "Hammersmith One", sans-serif;
     font-size: 25px;
-    color : var(--color-jess-pink);
+    color: var(--color-jess-pink);
 }
 
 /* Navigation links hover effect. */
@@ -127,12 +135,27 @@
 }
 
 @media screen and (max-width: 1150px) {
+    .app__navbar-logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        left: 2rem;
+    }
+
+    .app__navbar {
+        background: none;
+        background-color: #f8f7f6;
+        height: 9rem;
+    }
+
     .app__navbar-links {
         display: none;
     }
 
     .app__navbar-smallscreen {
         display: flex;
+        justify-content: flex-end;
+        flex: 1;
     }
 }
 
@@ -149,6 +172,7 @@
     .app__navbar-logo {
         width: 110px;
     }
+
     .app__navbar-logo img {
         max-width: 100px;
     }
