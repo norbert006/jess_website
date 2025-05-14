@@ -48,8 +48,8 @@
     }
 
     /* Adjust spacing when label is above image */
-    .activity-label {
-        margin-bottom: 0;
-        margin-top: 1rem;
+    .activity-label-image {
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
 }

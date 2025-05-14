@@ -42,8 +42,8 @@ const PotteryActivities = () => {
         <div className="activities-container">
             {activities.map((activity, index) => (
                 <div className="activity-card">
-                    <img src={activity.labelImage} alt="Label" className="activity-label-image" />
                     <img src={activity.image} alt="Activity" className="activity-image" />
+                    <img src={activity.labelImage} alt="Label" className="activity-label-image" />
                 </div>
             ))}
         </div>
