@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 8rem 4rem;
-    background-image: url('../../assets/blue_blob_background3.svg');
+    /* background-image: url('../../assets/blue_blob_background3.svg'); */
     background-repeat: no-repeat;
     background-position: -1.5rem -4rem;
     background-size: 100%;
@@ -12,11 +12,13 @@
 
 .about-us-title {
     font-size: 6rem;
-    color: var(--color-jess-pink); /* Light brown color for "ABOUT US" */
+    color: var(--color-jess-pink);
+    /* Light brown color for "ABOUT US" */
     text-align: center;
     font-family: "Hammersmith One", sans-serif;
     font-weight: 100;
     letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .about-us-content {
@@ -41,194 +43,97 @@
 
 .about_para {
     font-family: "Hammersmith One", sans-serif;
-    font-size: 1.8rem;
-    line-height: 1.4; /* Adjusted for better spacing */
-    color: white;
-    max-width: 32%;
+    font-size: 2rem;
+    line-height: 1.4;
+    /* Adjusted for better spacing */
+    color: var(--color-jess-pink);
+    max-width: 42%;
     text-align: center;
     margin-left: 12rem;
 }
 
 /* Responsive Design */
 
-@media screen and (max-width: 1900px) {
-    .about-us-logo img {
-        width: 85%;
-        margin-left: 10rem;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .about_para {
-        margin-top: 2rem;
-        margin-left: 6rem;
-    }
-}
-
-@media screen and (max-width: 1700px) {
-    .about-us-container {
-        background-position: 0rem 4rem;
-    }
-    .about_para {
-        margin-top: 8rem;
-    }
-}
-
-@media screen and (max-width: 1615px) {
-    .about-us-container {
-        background-size: 110%;
-        background-position: 0rem 2rem;
-
-    }
-    .about_para {
-        max-width: 44%;
-        margin-left: 4rem;
-        margin-top: 2rem;
-    }
-    .about-us-logo img {
-        width: 80%;
-        /* margin-left: 2rem; */
-        margin-top: 4rem;
-    }
-}
 
 @media screen and (max-width: 1460px) {
-    .about-us-container {
-        background-position: -2rem 2rem;
-        background-size: 120%;
-    }
     .about_para {
         max-width: 50%;
         margin-left: 4rem;
     }
-}
 
-@media screen and (max-width: 1340px) {
-    .about-us-container {
-        background-position: 0rem 4rem;
-        background-size: 110%;
-    }
-    .about_para {
-        margin-top: 10rem;
-        font-size: 1.4rem;
-    }
-}
-
-@media screen and (max-width: 1260px) {
-    .about-us-container {
-        background-position: 0rem 8rem;
-        background-size: 115%;
-    }
-    .about_para {
-        margin-top: 10rem;
-        max-width: 60%;
-    }
     .about-us-logo img {
         width: 120%;
         margin-left: 0rem;
     }
 }
 
-@media screen and (max-width: 1135px) {
-    .about-us-container {
-        background-position: 0rem 11rem;
+@media screen and (max-width: 1340px) {
+    .about_para {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .about_para {
+        max-width: 60%;
     }
 }
 
 @media screen and (max-width: 1045px) {
     .about-us-container {
-        background-image: none;
-        margin-top: -10rem;
+        margin-top: -4rem;
     }
+
     .about_para {
-        color: var(--color-jess-pink);
-        margin-top: 4rem;
-        width: 140%;
-        font-size: 1.8rem;
+        width: 200%;
+        font-size: 1.6rem;
         margin-bottom: 2rem;
-        align-items: center;
-        text-align: center;
-        /* margin: 0; */
         padding: 0;
     }
+
     .about-us-logo img {
-        width: 100%;
-        /* margin-left: 6rem; */
-    }
-}
-
-
-@media screen and (max-width: 1000px) {
-    .about_para {
-        margin: 0;
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .about-us-container {
-        background-position: -34rem 2rem;
-        background-size: 280%;
-    }
     .about-us-logo img {
         width: 100%;
-        margin-top: 10rem;
-        /* margin-left: 6rem; */
     }
+
     .about_para {
         font-size: 1.4rem;
     }
+
     .about-us-title {
         font-size: 4rem;
     }
 }
 
-@media screen and (max-width: 870px) {
-    .about-us-container {
-        background-position: -34rem 2rem;
-        background-size: 300%;
-    }
-}
-
 @media screen and (max-width: 850px) {
     .about-us-content {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
+
     .about-us-logo {
-        /* max-width: 50%; */
+        margin-left: 0;
         padding: 2rem;
-        /* margin-left: -4rem; */
-        margin-top: -10rem;
     }
+
     .about-us-container {
         background-position: -28rem -2rem;
         background-size: 320%;
+        margin-top: 0rem;
         margin-bottom: -12rem;
     }
+
     .about_para {
-        /* margin-left: 2rem; */
-        margin-top: 4rem;
+        margin-left: 0;
+        margin-top: 2rem;
         max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .about-us-container {
-        background-position: -28rem -2rem;
-        background-size: 340%;
-    }
-}
-
-@media screen and (max-width: 670px) {
-    .about-us-container {
-        background-position: -28rem -2rem;
-        background-size: 350%;
-    }
-}
-
-@media screen and (max-width: 662px) {
-    .about-us-container {
-        background-position: -28rem 8rem;
     }
 }
 
@@ -236,17 +141,13 @@
     .about-us-title {
         font-size: 3.8rem;
     }
+
     .about-us-logo {
-        /* margin-left: 4rem; */
         max-width: 100%;
     }
+
     .about_para {
         max-width: 100%;
-    }
-    .about-us-container {
-        background-size: cover;
-        background-position: center 4rem;
-        padding-top: 0rem;
     }
 }
 
@@ -255,6 +156,7 @@
         font-size: 1.2rem;
         margin-bottom: 0rem;
     }
+
     .about-us-container {
         padding-top: 5rem;
     }
@@ -271,9 +173,11 @@
         font-size: 3.5rem;
         letter-spacing: 0.3rem;
     }
-    .about-us-logo img{
+
+    .about-us-logo img {
         width: 100%;
     }
+
     .about_para {
         font-size: 1rem;
     }
@@ -377,7 +281,8 @@
 }
 
 .app__gallery-images_card img {
-    border: solid var(--color-jess-blue) 0.1px; /* Using this so that the hover effect can "retract back" rather than disappearing. */
+    border: solid var(--color-jess-blue) 0.1px;
+    /* Using this so that the hover effect can "retract back" rather than disappearing. */
     width: 100%;
     height: 100%;
     object-fit: cover;

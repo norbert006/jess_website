@@ -82,9 +82,15 @@
     background-color: var(--color-jess-pink);
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1900px) {
     .contact {
-        margin-top: 6rem;
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 1045px) {
+    .contact {
+        margin-top: 5rem;
     }
 }
 

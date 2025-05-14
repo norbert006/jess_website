@@ -1,12 +1,9 @@
 import React, { useRef } from 'react'
 
 import Navbar from './components/Navbar/Navbar'
-import Header from './container/Header/Header'
 import ContactForm from './components/ContactForm/ContactForm';
 import Gallery from './components/Gallery/Gallery';
 import Footer from './components/Footer/Footer';
-import InfoBox from './components/InfoBox/InfoBox';
-import Upcoming from './components/Upcoming/Upcoming';
 import NewHeader from './components/Header/Header';
 
 import './App.css'
@@ -21,8 +18,6 @@ const App = () => {
     <div>
       <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} upcomingEventsRef={upcomingEventsRef}/>
       <NewHeader logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
-      <Upcoming upcomingEventsRef={upcomingEventsRef}/>
-      <InfoBox privateEventsRef={privateEventsRef} contactUsRef={contactUsRef}/>
       <Gallery aboutUsRef={aboutUsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
