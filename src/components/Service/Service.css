@@ -1,0 +1,159 @@
+.service-container {
+    padding: 15rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #fdf8f6;
+    margin-top: -10rem;
+}
+
+.main-title {
+    background-color: #1e2c41;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    max-width: 1100px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.text-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1 1 300px;
+    max-width: 1000px;
+}
+
+.text-block {
+    flex: 1 1 300px;
+    max-width: 800px;
+}
+
+.text-block h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-block p {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.image-grid {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 460px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.image-grid .row {
+    display: flex;
+    gap: 1rem;
+}
+
+.image-grid .row img {
+    width: 48%;
+}
+
+.back-button {
+    background-color: #c7a6a1;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1960px) {
+    .text-block h2 {
+        font-size: 3rem;
+    }
+
+    .text-block p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1800px) {
+    .text-block h2 {
+        font-size: 2.5rem;
+    }
+
+    .text-block p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .text-block h2 {
+        font-size: 2rem;
+    }
+
+    .text-block p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 1450px) {
+    .service-container {
+        padding: 2rem;
+        margin-top: 0rem;
+    }
+
+    .text-block {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .section {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .image-grid .row {
+        flex-direction: column;
+    }
+
+    .image-grid .row img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 790px) {
+    .intro {
+        font-size: 20px;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+    }
+}

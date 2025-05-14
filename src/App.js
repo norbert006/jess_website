@@ -5,6 +5,7 @@ import ContactForm from './components/ContactForm/ContactForm';
 import Gallery from './components/Gallery/Gallery';
 import Footer from './components/Footer/Footer';
 import NewHeader from './components/Header/Header';
+import Service from './components/Service/Service';
 
 import './App.css'
 
@@ -21,6 +22,7 @@ const App = () => {
       <Gallery aboutUsRef={aboutUsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
+      <Service />
     </div>
   )
 }
