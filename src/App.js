@@ -11,14 +11,12 @@ import './App.css'
 
 const App = () => {
   const aboutUsRef = useRef(null);
-  const privateEventsRef = useRef(null);
   const logoHomeRef = useRef(null);
   const contactUsRef = useRef(null);
-  const upcomingEventsRef = useRef(null);
   return (
     <div>
-      <Navbar aboutUsRef={aboutUsRef} privateEventsRef={privateEventsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} upcomingEventsRef={upcomingEventsRef}/>
-      <NewHeader logoHomeRef={logoHomeRef} privateEventsRef={privateEventsRef} upcomingEventsRef={upcomingEventsRef}/>
+      <Navbar aboutUsRef={aboutUsRef} logoHomeRef={logoHomeRef} contactUsRef={contactUsRef} />
+      <NewHeader logoHomeRef={logoHomeRef} />
       <Gallery aboutUsRef={aboutUsRef}/>
       <ContactForm contactUsRef={contactUsRef}/>
       <Footer />
