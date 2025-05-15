@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import clayfulhands_logo from '../../assets/clayfulhands_logo_transparent.webp'
@@ -31,6 +33,12 @@ const Navbar = ({ aboutUsRef, logoHomeRef, contactUsRef }) => {
         }
     };
 
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/#home');
+    };
+
     const openWebsite = (url) => {
         window.open(url, "_blank", "noreferrer");
     };
@@ -38,7 +46,7 @@ const Navbar = ({ aboutUsRef, logoHomeRef, contactUsRef }) => {
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
-                <a href="#home" onClick={() => handleScroll(logoHomeRef)}><img src={clayfulhands_logo} alt="app_logo" /></a>
+                <a href="#home" onClick={() => handleScroll(logoHomeRef)}><img src={clayfulhands_logo} alt="app_logo" onClick={handleNavigate}/></a>
             </div>
             <ul className="app__navbar-links">
                 <li className="p__opensans"><a href="#about_us" onClick={() => handleScroll(aboutUsRef)}>ABOUT US</a></li>

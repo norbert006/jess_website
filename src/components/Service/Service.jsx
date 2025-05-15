@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 import importedImage from "../../assets/sub_header_finger.webp"
 import "./Service.css";
 
 const ServiceComponent = () => {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/#home');
+    };
     return (
         <div className="service-container">
             <h1 className="main-title">POTTERY COURSES</h1>
@@ -61,7 +68,7 @@ const ServiceComponent = () => {
 
 
 
-            <button className="back-button">BACK TO HOME</button>
+            <button className="back-button" onClick={handleNavigate}>BACK TO HOME</button>
         </div>
     );
 };
