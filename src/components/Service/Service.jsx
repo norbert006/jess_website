@@ -14,7 +14,7 @@ const ServiceComponent = () => {
         <div className="service-container">
             <h1 className="main-title">POTTERY COURSES</h1>
             <p className="intro">
-                We update this regularly for future holiday clubs. <br />
+                We update this regularly for future Pottery Courses. <br />
                 If you’d like to keep up to date and be the first to know – sign up to our newsletter!
             </p>
 
@@ -65,8 +65,6 @@ const ServiceComponent = () => {
                     </div>
                 </div>
             </div>
-
-
 
             <button className="back-button" onClick={handleNavigate}>BACK TO HOME</button>
         </div>
