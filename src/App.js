@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import NewHeader from './components/Header/Header';
 import Service from './components/Services/Service';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToHashElement from './components/ScrollToHashElement';
 
 import './App.css'
 
@@ -20,8 +21,9 @@ const App = () => {
 
   const [services, setServices] = useState([]);
 
-    const [loading, setLoading] = useState(true); // optional
+  const [loading, setLoading] = useState(true); // optional
 
+  /* Load backend data */
   useEffect(() => {
     const fetchServices = async () => {
       try {
@@ -38,10 +40,11 @@ const App = () => {
   }, []);
 
   if (loading) return <div>Loading services...</div>;
-
+  
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHashElement />
       <Routes>
         <Route
           path="/" element={

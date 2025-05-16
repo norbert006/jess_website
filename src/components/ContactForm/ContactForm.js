@@ -47,7 +47,7 @@ const ContactForm = ({ contactUsRef }) => {
 
 
     return (
-        <section className='contact' ref={contactUsRef}>
+        <section className='contact' ref={contactUsRef} id='contact_us'>
             <div>
                 <h1>Get in Touch Today!</h1>
                 <p>Send us your enquiry, however big or small—we're always up for a chat! Simply fill in the form below. (If applicable, please include details such as dates, number of people, and location.)</p>
