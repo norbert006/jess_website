@@ -17,6 +17,7 @@ const ServiceComponent = ({ services }) => {
     var service = services.find(s => s.urlName === 'pottery_courses');
     console.log("First service = ", service.urlName)
 
+    console.log("img1 ",service.img1)
     if (service.urlName === 'pottery_courses' && serviceName === 'pottery_courses') {
         return (
             <div className="service-container">
@@ -37,7 +38,7 @@ const ServiceComponent = ({ services }) => {
                             </div>
                         </div>
                         <div className="image-grid">
-                            <img src={importedImage} alt="img1" />
+                            <img src={service.img1} alt="img1" />
                             <div className="row">
                                 <img className="top-bottom-images" src={importedImage} alt="img2" />
                                 <img src={importedImage} alt="img3" />
