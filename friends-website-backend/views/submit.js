@@ -1,35 +1,54 @@
-document.getElementById("submitBtn").addEventListener("click", () => {
-  let inputElem = document.getElementById("imgfile");
-  let file = inputElem.files[0];
-  let customName = document.getElementById("fileName").value;
+function handleImageUpload(serviceId, imgField) {
+  const fileInput = document.getElementById(`${serviceId}-${imgField}-file`);
+  const nameInput = document.getElementById(`${serviceId}-${imgField}-name`);
+
+  const file = fileInput.files[0];
+  const customName = nameInput.value;
+
   if (!file) {
     alert("Please select a file first.");
     return;
   }
+
   if (!customName) {
     alert("Please provide a file name.");
     return;
   }
-  // Create new file so we can rename the file
-  let blob = file.slice(0, file.size, "image/jpeg");
-  newFile = new File([blob], `${customName}.jpeg`, { type: "image/jpeg" });
-  // Build the form data - You can add other input values to this i.e descriptions, make sure img is appended last
-  let formData = new FormData();
+
+  // Rename the file
+  const blob = file.slice(0, file.size, file.type);
+  const newFile = new File([blob], `${customName}.jpeg`, { type: file.type });
+
+  const formData = new FormData();
   formData.append("imgfile", newFile);
+
+  // Step 1: Upload image to GCS
   fetch("/upload", {
     method: "POST",
     body: formData,
   })
-    .then((res) => res.text())
-    .then((text) => {
-      console.log("Server Response:", text);
-      alert("Server Response:", text);
-      if (typeof loadPosts === "function") {
-        loadPosts();
-      }
+    .then(res => res.text()) // or .json() if your /upload returns JSON
+    .then(imageUrl => {
+      console.log("Uploaded image URL:", imageUrl);
+
+      // Step 2: Send PATCH to update MongoDB
+      return fetch(`/api/services/update/${serviceId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          [imgField]: imageUrl, // dynamic key
+        }),
+      });
     })
-    .catch((err) => {
-      console.error("Upload failed:", err);
-      alert("File upload failed.");
+    .then(res => res.json())
+    .then(data => {
+      alert(`Updated ${imgField} successfully!`);
+      console.log("Database update response:", data);
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      alert("Something went wrong.");
     });
-});
+}

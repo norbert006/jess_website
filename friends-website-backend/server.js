@@ -49,9 +49,13 @@ app.post("/upload", multer.single("imgfile"), (req, res) => {
       const blob = bucket.file(req.file.originalname);
       const blobStream = blob.createWriteStream();
 
+      // Construct the public URL
+      const publicUrl = `https://storage.googleapis.com/${bucket.name}/${req.file.originalname}`;
+      
       blobStream.on("finish", () => {
-        res.status(200).send("Success");
+        res.status(200).send(publicUrl);
         console.log("Success");
+        console.log("Uploaded:", publicUrl);
       });
       blobStream.end(req.file.buffer);
     } else throw "error with img";

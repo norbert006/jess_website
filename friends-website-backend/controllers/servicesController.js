@@ -13,18 +13,11 @@ const getServicesContent = async (req, res) => {
 // UPDATE specific service
 const updateServicesContent = async (req, res) => {
   const { id } = req.params;
-  const { serviceName, mainTitle, intro,
-    subtitle1, subtitle2, subtitle3, subtitle4,
-    para1, para2, para3, para4 } = req.body;
 
   try {
     const updated = await Content.findByIdAndUpdate(
       id,
-      {
-        serviceName, mainTitle, intro,
-        subtitle1, subtitle2, subtitle3, subtitle4,
-        para1, para2, para3, para4
-      },
+      { $set: req.body }, // only update the fields that exist in req.body
       { new: true }
     );
     res.json(updated);
@@ -32,5 +25,6 @@ const updateServicesContent = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
 
 module.exports = { getServicesContent, updateServicesContent };
