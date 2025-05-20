@@ -50,7 +50,6 @@
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('services-container');
-
                     data.forEach(service => {
                         const div = document.createElement('div');
                         div.className = 'service';
@@ -64,22 +63,46 @@
                         const imagesDiv = document.createElement('div');
                         imagesDiv.className = 'service-images';
 
-                        // Loop through image fields
                         ['img1', 'img2', 'img3', 'img4'].forEach(key => {
+                            const imgContainer = document.createElement('div');
+                            imgContainer.style.marginBottom = '1rem';
+
                             if (service[key]) {
                                 const img = document.createElement('img');
-                                img.src = service[key]; // must be a valid image URL or base64 string
+                                img.src = service[key];
                                 img.alt = `${service.serviceName} - ${key}`;
-                                imagesDiv.appendChild(img);
+                                imgContainer.appendChild(img);
                             }
+
+                            // File input
+                            const fileInput = document.createElement('input');
+                            fileInput.type = 'file';
+                            fileInput.accept = 'image/*';
+                            fileInput.id = `${service._id}-${key}-file`;
+
+                            // Custom file name input
+                            const nameInput = document.createElement('input');
+                            nameInput.type = 'text';
+                            nameInput.placeholder = 'Custom file name';
+                            nameInput.id = `${service._id}-${key}-name`;
+
+                            // Submit button
+                            const button = document.createElement('button');
+                            button.textContent = 'Upload Image';
+                            button.addEventListener('click', () => {
+                                handleImageUpload(service._id, key);
+                            });
+
+                            imgContainer.appendChild(document.createElement('br'));
+                            imgContainer.appendChild(fileInput);
+                            imgContainer.appendChild(nameInput);
+                            imgContainer.appendChild(button);
+                            imagesDiv.appendChild(imgContainer);
                         });
 
                         div.appendChild(imagesDiv);
                         container.appendChild(div);
                     });
-                })
-                .catch(error => {
-                    console.error('Error fetching services:', error);
                 });
         </script>
     </div>
