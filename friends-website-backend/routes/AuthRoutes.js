@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 // Replace with real authentication logic
-const validUser = { username: 'admin', password: '1234' };
+const validUser = { username: process.env.ADMIN_USERNAME, password: process.env.PASSADMIN_PASSWORDWORD };
 
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    if (username === validUser.username && password === validUser.password) {
+    if (username === process.env.ADMIN_USERNAME && password === process.env.PASSADMIN_PASSWORDWORD) {
         // Simple session example
         req.session.user = username;
         return res.json({ success: true });

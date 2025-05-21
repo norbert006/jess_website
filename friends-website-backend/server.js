@@ -22,7 +22,11 @@ app.use(cors({
 app.use(session({
     secret: 'super-secret-key',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false, // important: don’t save empty sessions
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+        sameSite: 'lax',
+    }
 }));
 app.use(express.json());
 app.use(express.static(src)); // For photo backend
