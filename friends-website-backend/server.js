@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Multer = require("multer");
 const PORT = process.env.PORT || 5000;
+const session = require('express-session');
+const authRoutes = require('./routes/AuthRoutes');
 
 const path = require('path'); // For photo backend
 const src = path.join(__dirname, 'views'); // For photo backend
@@ -14,13 +16,25 @@ const servicesRoutes = require('./routes/servicesRoutes');
 
 // Initialising express
 const app = express();
-app.use(cors());
+app.use(cors({
+  credentials: true,
+}));
+app.use(session({
+    secret: 'super-secret-key',
+    resave: false,
+    saveUninitialized: true,
+}));
 app.use(express.json());
 app.use(express.static(src)); // For photo backend
 
 // Setting up routes for MongoDB calls
 app.use('/api/content', contentRoutes);
 app.use('/api/services', servicesRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/services', (req, res, next) => {
+    if (!req.session?.user) return res.status(401).json({ error: 'Not authorized' });
+    next();
+}, servicesRoutes);
 
 const multer = Multer({
   storage: Multer.memoryStorage(),

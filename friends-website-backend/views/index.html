@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storage</title>
-
     <style>
         .service {
             border: 1px solid #ccc;
@@ -37,68 +36,129 @@
 </head>
 
 <body>
-    <script src="submit.js"></script>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
+        <button onclick="login()">Login</button>
+        <p id="login-error" style="color: red;"></p>
+    </div>
+
+    <script src="submit.js" style="display: none;"></script>
     <div id="services-container">
-
         <script>
-            fetch('http://localhost:5000/api/services/services')
-                .then(response => response.json())
+            // Check login status on page load
+            fetch('http://localhost:5000/api/auth/me', {
+                credentials: 'include'
+            })
+                .then(res => {
+                    if (!res.ok) throw new Error('Not logged in');
+                    return res.json();
+                })
                 .then(data => {
-                    const container = document.getElementById('services-container');
-                    data.forEach(service => {
-                        const div = document.createElement('div');
-                        div.className = 'service';
+                    // Already logged in
+                    document.getElementById('login-container').style.display = 'none';
+                    document.getElementById('services-container').style.display = 'block';
+                    loadServices(); // Call your existing service-loading logic
+                })
+                .catch(() => {
+                    // Show login form
+                    document.getElementById('login-container').style.display = 'block';
+                    document.getElementById('services-container').style.display = 'none';
+                });
+        </script>
+        <script>
+            function login() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
 
-                        // Service name
-                        const name = document.createElement('h2');
-                        name.textContent = service.serviceName;
-                        div.appendChild(name);
+                fetch('http://localhost:5000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'include', // Include cookies for session if used
+                    body: JSON.stringify({ username, password }),
+                })
+                    .then(res => {
+                        if (!res.ok) throw new Error('Login failed');
+                        return res.json();
+                    })
+                    .then(() => {
+                        document.getElementById('login-container').style.display = 'none';
+                        document.getElementById('services-container').style.display = 'block';
+                        loadServices(); // Load the main UI only after login
+                    })
+                    .catch(err => {
+                        document.getElementById('login-error').textContent = 'Invalid credentials';
+                    });
+            }
 
-                        // Images
-                        const imagesDiv = document.createElement('div');
-                        imagesDiv.className = 'service-images';
+            function loadServices() {
+                fetch('http://localhost:5000/api/services/services', {
+                    credentials: "include"
+                })
+                    .then(response => {
+                        if (!response.ok) throw new Error('Not authorized');
+                        return response.json();
+                    })
+                    .then(data => {
+                        const container = document.getElementById('services-container');
+                        data.forEach(service => {
+                            const div = document.createElement('div');
+                            div.className = 'service';
 
-                        ['img1', 'img2', 'img3', 'img4'].forEach(key => {
-                            const imgContainer = document.createElement('div');
-                            imgContainer.style.marginBottom = '1rem';
+                            // Service name
+                            const name = document.createElement('h2');
+                            name.textContent = service.serviceName;
+                            div.appendChild(name);
 
-                            if (service[key]) {
-                                const img = document.createElement('img');
-                                img.src = service[key];
-                                img.alt = `${service.serviceName} - ${key}`;
-                                imgContainer.appendChild(img);
-                            }
+                            // Images
+                            const imagesDiv = document.createElement('div');
+                            imagesDiv.className = 'service-images';
 
-                            // File input
-                            const fileInput = document.createElement('input');
-                            fileInput.type = 'file';
-                            fileInput.accept = 'image/*';
-                            fileInput.id = `${service._id}-${key}-file`;
+                            ['img1', 'img2', 'img3', 'img4'].forEach(key => {
+                                const imgContainer = document.createElement('div');
+                                imgContainer.style.marginBottom = '1rem';
 
-                            // Custom file name input
-                            const nameInput = document.createElement('input');
-                            nameInput.type = 'text';
-                            nameInput.placeholder = 'Custom file name';
-                            nameInput.id = `${service._id}-${key}-name`;
+                                if (service[key]) {
+                                    const img = document.createElement('img');
+                                    img.src = service[key];
+                                    img.alt = `${service.serviceName} - ${key}`;
+                                    imgContainer.appendChild(img);
+                                }
 
-                            // Submit button
-                            const button = document.createElement('button');
-                            button.textContent = 'Upload Image';
-                            button.addEventListener('click', () => {
-                                handleImageUpload(service._id, key);
+                                // File input
+                                const fileInput = document.createElement('input');
+                                fileInput.type = 'file';
+                                fileInput.accept = 'image/*';
+                                fileInput.id = `${service._id}-${key}-file`;
+
+                                // Custom file name input
+                                const nameInput = document.createElement('input');
+                                nameInput.type = 'text';
+                                nameInput.placeholder = 'Custom file name';
+                                nameInput.id = `${service._id}-${key}-name`;
+
+                                // Submit button
+                                const button = document.createElement('button');
+                                button.textContent = 'Upload Image';
+                                button.addEventListener('click', () => {
+                                    handleImageUpload(service._id, key);
+                                });
+
+                                imgContainer.appendChild(document.createElement('br'));
+                                imgContainer.appendChild(fileInput);
+                                imgContainer.appendChild(nameInput);
+                                imgContainer.appendChild(button);
+                                imagesDiv.appendChild(imgContainer);
                             });
 
-                            imgContainer.appendChild(document.createElement('br'));
-                            imgContainer.appendChild(fileInput);
-                            imgContainer.appendChild(nameInput);
-                            imgContainer.appendChild(button);
-                            imagesDiv.appendChild(imgContainer);
+                            div.appendChild(imagesDiv);
+                            container.appendChild(div);
                         });
-
-                        div.appendChild(imagesDiv);
-                        container.appendChild(div);
                     });
-                });
+            }
         </script>
     </div>
 </body>
