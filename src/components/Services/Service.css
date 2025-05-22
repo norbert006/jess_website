@@ -82,7 +82,8 @@
 }
 
 .back-button {
-    background-color: #c7a6a1;
+    background-color: var(--color-jess-pink);
+    ;
     color: white;
     padding: 0.75rem 2rem;
     border: none;
@@ -128,6 +129,10 @@
         margin-top: 0rem;
     }
 
+    .main-title {
+        width: 50%;
+    }
+
     .text-block {
         flex: 1;
         max-width: 500px;
@@ -145,6 +150,12 @@
 
     .image-grid .row img {
         width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-title {
+        width: 90%;
     }
 }
 

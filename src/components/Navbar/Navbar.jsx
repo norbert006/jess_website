@@ -82,13 +82,13 @@ const Navbar = ({ aboutUsRef, logoHomeRef, contactUsRef }) => {
                         <Link to="/#home"><img src={clayfulhands_logo} alt="app_logo" />{console.log(currentPath)}</Link>
                     </div>
                     <ul className="app__navbar-links">
-                        <Link to="/#home"><li className="p__opensans">HOME</li></Link>
-                        <Link to="/services/pottery_courses"><li className={currentPath.endsWith("pottery_courses") ? "active" : "p__opensans"}>COURSES</li></Link>
-                        <Link to="/services/kids_pottery"><li className={currentPath.endsWith("kids_pottery") ? "active" : "p__opensans"}>KIDS POTTERY</li></Link>
-                        <Link to="/services/pottery_painting"><li className={currentPath.endsWith("pottery_painting") ? "active" : "p__opensans"}>POTTERY PAINTING</li></Link>
-                        <Link to="/services/pop_up_events"><li className={currentPath.endsWith("pop_up_events") ? "active" : "p__opensans"}>STUDIO MEMBERSHIP</li></Link>
-                        <Link to="/services/studio_membership"><li className={currentPath.endsWith("studio_membership") ? "active" : "p__opensans"}>POP-UP EVENTS</li></Link>
-                        <Link to="/services/pop_up_events"><li className={currentPath.endsWith("pop_up_events") ? "active" : "p__opensans"}>PRIVATE EVENTS</li></Link>
+                        <li className="p__opensans"><Link to="/#home">HOME</Link></li>
+                        <li className={currentPath.endsWith("pottery_courses") ? "active" : "p__opensans"}><Link to="/services/pottery_courses">COURSES</Link></li>
+                        <li className={currentPath.endsWith("kids_pottery") ? "active" : "p__opensans"}><Link to="/services/kids_pottery">KIDS POTTERY</Link></li>
+                        <li className={currentPath.endsWith("pottery_painting") ? "active" : "p__opensans"}><Link to="/services/pottery_painting">POTTERY PAINTING</Link></li>
+                        <li className={currentPath.endsWith("pop_up_events") ? "active" : "p__opensans"}><Link to="/services/pop_up_events">STUDIO MEMBERSHIP</Link></li>
+                        <li className={currentPath.endsWith("studio_membership") ? "active" : "p__opensans"}><Link to="/services/studio_membership">POP-UP EVENTS</Link></li>
+                        <li className={currentPath.endsWith("private_booking") ? "active" : "p__opensans"}><Link to="/services/private_booking">PRIVATE EVENTS</Link></li>
                         <Link to="/#contact_us"><li className="p__opensans">CONTACT US</li></Link>
                         <li>
                             <FiFacebook style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.facebook.com/clayfulhands/")} />
@@ -104,14 +104,14 @@ const Navbar = ({ aboutUsRef, logoHomeRef, contactUsRef }) => {
                             <div className={`app__navbar-smallscreen_overlay flex__center ${toggleMenu ? 'slide-left' : 'slide-right'}`}>
                                 <AiOutlineCloseCircle fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
                                 <ul className="app__navbar-smallscreen_links">
-                                    <Link to="/#home"><li className="p__opensans">HOME</li></Link>
-                                    <Link to="/services/pottery_courses"><li className="p__opensans">COURSES</li></Link>
-                                    <Link to="/services/kids_pottery"><li className="p__opensans">KIDS POTTERY</li></Link>
-                                    <Link to="/services/pottery_painting"><li className="p__opensans">POTTERY PAINTING</li></Link>
-                                    <Link to="/services/pop_up_events"><li className="p__opensans">STUDIO MEMBERSHIP</li></Link>
-                                    <Link to="/services/studio_membership"><li className="p__opensans">POP-UP EVENTS</li></Link>
-                                    <Link to="/services/pop_up_events"><li className="p__opensans">PRIVATE EVENTS</li></Link>
-                                    <Link to="/#contact_us"><li className="p__opensans">CONTACT US</li></Link>
+                                    <li className="p__opensans" onClick={() => setToggleMenu(false)}><Link to="/#home">HOME</Link></li>
+                                    <li className={currentPath.endsWith("pottery_courses") ? "active" : "p__opensans"} onClick={() => setToggleMenu(false)}><Link to="/services/pottery_courses">COURSES</Link></li>
+                                    <li className={currentPath.endsWith("kids_pottery") ? "active" : "p__opensans"} onClick={() => setToggleMenu(false)}><Link to="/services/kids_pottery">KIDS POTTERY</Link></li>
+                                    <li className={currentPath.endsWith("pottery_painting") ? "active" : "p__opensans"} onClick={() => setToggleMenu(false)}><Link to="/services/pottery_painting">POTTERY PAINTING</Link></li>
+                                    <li className={currentPath.endsWith("pop_up_events") ? "active" : "p__opensans"} onClick={() => setToggleMenu(false)}><Link to="/services/pop_up_events">STUDIO MEMBERSHIP</Link></li>
+                                    <li className={currentPath.endsWith("studio_membership") ? "active" : "p__opensans"} onClick={() => setToggleMenu(false)}><Link to="/services/studio_membership">POP-UP EVENTS</Link></li>
+                                    <li className={currentPath.endsWith("private_booking") ? "active" : "p__opensans"} onClick={() => setToggleMenu(false)}><Link to="/services/private_booking">PRIVATE EVENTS</Link></li>
+                                    <li className="p__opensans" onClick={() => setToggleMenu(false)}><Link to="/#contact_us">CONTACT US</Link></li>
                                     <li>
                                         <FiFacebook style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.facebook.com/clayfulhands/")} />
                                         <FiInstagram style={{ cursor: 'pointer' }} onClick={() => openWebsite("https://www.instagram.com/clayfulhands/")} />
