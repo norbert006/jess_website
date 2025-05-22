@@ -7,7 +7,7 @@ const Gallery = ({ aboutUsRef }) => {
     console.log("width = ", window.innerWidth)
 
     return (
-        <div className="about-us-container" ref={aboutUsRef}>
+        <div className="about-us-container" ref={aboutUsRef} id="about_us">
             <h2 className="about-us-title">ABOUT US</h2>
             <div className="about-us-content" >
                 <div className='about_para'>

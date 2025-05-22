@@ -18,7 +18,7 @@ const ServiceComponent = ({ services }) => {
 
     if (service.urlName === 'pottery_courses' && serviceName === 'pottery_courses') {
         return (
-            <div className="service-container">
+            <div className="service-container" id='pottery_courses'>
 
                 <div key={service._id}>
                     <img className="main-title" src={service.mainTitle} alt="main-title" />
@@ -65,7 +65,7 @@ const ServiceComponent = ({ services }) => {
 
     if (service.urlName === 'kids_pottery' && serviceName === 'kids_pottery') {
         return (
-            <div className="service-container">
+            <div className="service-container" id='kids_pottery'>
 
                 <div key={service._id}>
                     <img className="main-title" src={service.mainTitle} alt="main-title" />
@@ -106,7 +106,7 @@ const ServiceComponent = ({ services }) => {
 
     if (service.urlName === 'pottery_painting' && serviceName === 'pottery_painting') {
         return (
-            <div className="service-container">
+            <div className="service-container" id='pottery_painting'>
 
                 <div key={service._id}>
                     <img className="main-title" src={service.mainTitle} alt="main-title" />
@@ -147,7 +147,7 @@ const ServiceComponent = ({ services }) => {
 
     if (service.urlName === 'studio_membership' && serviceName === 'studio_membership') {
         return (
-            <div className="service-container">
+            <div className="service-container" id='studio_membership'>
 
                 <div key={service._id}>
                     <img className="main-title" src={service.mainTitle} alt="main-title" />
@@ -188,7 +188,7 @@ const ServiceComponent = ({ services }) => {
 
     if (service.urlName === 'pop_up_events' && serviceName === 'pop_up_events') {
         return (
-            <div className="service-container">
+            <div className="service-container" id='pop_up_events'>
 
                 <div key={service._id}>
                     <img className="main-title" src={service.mainTitle} alt="main-title" />
@@ -229,7 +229,7 @@ service = services.find(s => s.urlName === 'private_booking');
 
     if (service.urlName === 'private_booking' && serviceName === 'private_booking') {
         return (
-            <div className="service-container">
+            <div className="service-container" id='private_booking'>
 
                 <div key={service._id}>
                     <img className="main-title" src={service.mainTitle} alt="main-title" />
