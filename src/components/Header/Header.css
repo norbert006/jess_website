@@ -21,6 +21,7 @@
     height: auto;
     border-radius: 8px;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 /* New style for label images */
@@ -28,6 +29,7 @@
     max-width: 80%;
     height: auto;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 /* Responsive design for smaller screens */
